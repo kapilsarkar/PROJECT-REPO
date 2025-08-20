@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, 0.952);
+    color: #fff;
+    
+}
+.top-Movies{
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.topMovie1{
+    width: 52%;
+    box-shadow: #fff 0px 10px 36px 0px, rgb(133 125 26) 0px 0px 0px 1px;
+}
+.topMovieTitle{
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #ffe900;
+}
+.topMovieYear{
+    font-size: 1.2rem;
+    font-weight: 900; 
+    color: #f73e00;
+}
+.topMovieRunTime{
+    font-size: 1.2rem;
+    font-weight: 900; 
+    color: #ffc300;
+}
+.topMovieHead{
+    text-align: center;
+    color: #f73e00;
+    font-weight: 900;
+    padding: 1rem;
+}
+/* .topMovieList{
+    width: 20%;
+} */
+.movieHead{
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgb(230 190 0);
+    color: #162206;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.movieContainer{
+    width: 90%;
+    margin-inline: auto;
+    /* border: 1px solid rgb(198 185 14); */
+    margin-top: 0.5rem;
+    box-shadow: #9d9c3b 0px 22px 70px 4px;
+}
+.movieContainerInput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    gap: 1rem;
+}
+#movieSearch{
+    font-size: 1rem; 
+    padding: 16px;
+    width: 60%;
+    box-shadow: #fff 0px 25px 50px -12px;
+}
+.movieDetails{
+    display: flex;
+}
+
+.BtnSearch{
+      padding: 1rem 1.5rem;
+      background-color: rgb(214 200 19);
+      color: rgba(0, 0, 0, 0.941);
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+      border: none;
+      font-weight: 700;
+}
+.movieTitle{
+    text-align: center;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #f73e00;
+    font-weight: 900;
+}
+.movieImage{
+    width: 32%;
+    /* padding: 1rem; */
+    box-shadow: #fff 0px 1px 1px 0px inset, #fff 0px 50px 100px -20px, #fff 0px 30px 60px -30px;
+    
+}
+.movieGenre{
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: 900;
+    color: #ff00e0;
+}
+.movieActors{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    color: #ffc300;
+}
+.moviePlot{
+    font-size: 1rem;
+   font-weight: 700; 
+   margin-top: 1.5rem;
+   color: #6eff13;
+}
+.movieRating{
+    font-size: 1.5rem;
+   font-weight: 700; 
+   margin-top: 1.5rem;
+   color: #ffe900;
+}
+.releasedDate{
+    font-size: 1.2rem;
+   font-weight: 700; 
+   margin-top: 1.5rem;
+   color: #0ce9ff;
+}
+.moveRunTime{
+    font-size: 1rem;
+   font-weight: 700; 
+   color: #0ce9ff;
+}
+.movieDirector{
+    font-size: 1rem;
+   font-weight: 700;
+   color: #0ce9ff;
+}
+.movieLanguage{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0ce9ff;
+}
+.movieExtraDetails{
+    padding: 1rem;
+}
+.movieBoxOffice{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d6d311;
+    margin-top: 1rem;
+}
+@media(max-width:640px){
+    #movieSearch{
+        padding: 1rem;
+        width: 82%;
+        font-size: 0.7rem;
+    }
+    .movieContainer{
+        width: 90%;
+    }
+}
+@media(max-width:740px){
+    .movieDetails{
+        display: block;
+    }
+    .movieImage{
+        width: 90%;
+    }
+}
+@media(max-width:300px){
+    .movieTitle{
+        font-size: 2rem;
+    }
+}

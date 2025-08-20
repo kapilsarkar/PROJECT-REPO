@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FC Barcelona Clone</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="shortcut icon" href="./images/logo-1.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+      defer
+    ></script>
+    <link rel="stylesheet" href="./slider.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <!-- Front Header Section Starts -->
+    <section class="w-full bg-black text-white p-3">
+      <div class="flex items-center justify-center gap-5">
+        <span
+          class="bg-blue-950 text-white font-bold p-2 rounded-2xl text-center ml-14 hidden lg:block"
+          >Win the new jersey! Sign up for free and enter the draw 🔵🔴</span
+        >
+        <span class="text-yellow-500 p-2 font-bold text-center hidden lg:block"
+          >TAKE PART</span
+        >
+        <div class="hidden md:block">
+          <div class="flex gap-5 pl-10 md:ml-1">
+            <div class="flex mr-5 items-center justify-center">
+              <img src="./images/user.png" class="w-6" alt="user" /><span
+                class="text-white px-2 font-bold"
+                >Login</span
+              >
+            </div>
+            <button class="bg-red-600 text-white font-bold px-5 py-3 flex">
+              <img
+                src="./images/icon-white.png"
+                class="w-10"
+                alt="white-logo"
+              />Register
+            </button>
+            <span
+              class="text-white font-bold rounded-full hover:bg-red-600 cursor-pointer bg-slate-900 p-3"
+              >EN</span
+            >
+          </div>
+        </div>
+        <div class="block md:hidden ml-auto">
+          <div class="flex gap-2">
+            <button class="flex gap-3 bg-red-500 px-5 py-2 rounded-md">
+              <img src="./images/user.png" class="w-5" alt="white-logo" />
+              <span class="text-white font-bold">Login</span>
+            </button>
+            <div class="text-2xl flex bg-slate-700 p-1 rounded-xl">≡</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Front Header Section Ends -->
+
+    <!-- Menu Header Desktop Section Starts -->
+
+    <section
+      class="w-full -mt-10 bg-black text-white p-3 hidden media980:block"
+    >
+      <div class="flex items-center justify-center">
+        <div class="mt-3 pt-2">
+          <img src="./images/logo.png" class="w-64" alt="main-logo" />
+        </div>
+        <nav class="flex gap-9">
+          <a href="#" class="media980:font-bold">FIRST TEAM</a>
+          <a href="#" class="media980:font-bold">CLUB</a>
+          <a href="#" class="media980:font-bold">BARCA TEAMS</a>
+        </nav>
+        <nav class="flex items-center justify-between gap-9 pl-12 md:px-16">
+          <a href="#" class="text-sm font-bold text-yellow-300"
+            ><i class="fa-solid fa-ticket" style="color: #e5c110"></i>
+            <span class="text-sm md:font-bold text-yellow-300 pl-1"
+              >TICKETS & MUSEUM</span
+            ></a
+          >
+          <a href="#" class="font-bold text-yellow-300"
+            ><i class="fa-sharp fa-solid fa-shirt" style="color: #e5c110"></i
+            ><span class="font-bold text-yellow-300 pl-1">SHOP</span></a
+          >
+          <a href="#" class="font-bold text-yellow-300"
+            ><i class="fa-thin fa-binoculars" style="color: #e5c110"></i
+            ><span class="font-bold text-yellow-300 pl-1">CULERS</span></a
+          >
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </nav>
+      </div>
+    </section>
+    <!-- Menu Header Desktop Section Ends -->
+
+    <!-- Menu Header Mobile/Tablet Section Starts -->
+
+    <section class="w-full bg-black text-white block media980:hidden">
+      <div class="pt-3">
+        <img src="./images/logo.png" class="w-36" alt="mobile-logo" />
+      </div>
+      <div class="p-3">
+        <nav class="flex items-center justify-between">
+          <a href="#" class="font-bold text-yellow-300"
+            ><i class="fa-solid fa-ticket" style="color: #e5c110"></i>
+            <span class="font-bold text-yellow-300 pl-1"
+              >TICKETS & MUSEUM</span
+            ></a
+          >
+          <a href="#" class="font-bold text-yellow-300"
+            ><i class="fa-sharp fa-solid fa-shirt" style="color: #e5c110"></i
+            ><span class="font-bold text-yellow-300 pl-1">SHOP</span></a
+          >
+          <a href="#" class="font-bold text-yellow-300"
+            ><i class="fa-thin fa-binoculars" style="color: #e5c110"></i
+            ><span class="font-bold text-yellow-300 pl-1">CULERS</span></a
+          >
+        </nav>
+      </div>
+    </section>
+    <!-- Menu Header Mobile/Tablet Section Ends -->
+
+    <!-- Border div Starts -->
+    <div class="w-full p-1 bg-gradient-to-r from-pink-900 to-violet-500"></div>
+    <!-- Border div Ends -->
+    <!-- Hero Slider Section Starts -->
+
+    <section class="w-full bg-black">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="title text-white" data-swiper-parallax="-300">
+              Catch the ball with... Iñigo Martínez
+            </div>
+            <img src="./images/sld3.webp" alt="sld-img1" />
+          </div>
+          <div class="swiper-slide">
+            <div class="title text-white" data-swiper-parallax="-300">
+              Win the new jersey!
+            </div>
+
+            <img src="./images/sld2.webp" alt="sld-img2" />
+          </div>
+          <div class="swiper-slide">
+            <div class="title text-white" data-swiper-parallax="-300">
+              All about the US Tour
+            </div>
+            <img src="./images/sld10.webp" alt="sld-img-3" />
+          </div>
+          <div class="swiper-slide">
+            <div class="title text-white" data-swiper-parallax="-300">
+              Barça women to visit Mexico on preseason tour
+            </div>
+            <img src="./images/sld4.webp" alt="sld-img-3" />
+          </div>
+          <div class="swiper-slide">
+            <div class="title text-white" data-swiper-parallax="-300">
+              Barça to face Tottenham Hostpur in the Gamper game
+            </div>
+            <img src="./images/sld6.webp" alt="sld-img-3" />
+          </div>
+          <div class="swiper-slide">
+            <div class="title text-white" data-swiper-parallax="-300">
+              Barça sign Vitor Roque
+            </div>
+            <img src="./images/sld7.webp" alt="sld-img-3" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- Hero Slider Section Ends -->
+
+    <!-- Main Partner Section Starts -->
+
+    <section class="w-full bg-gradient-to-r from-pink-900 to-violet-900 p-5">
+      <div class="flex items-center justify-center gap-9 flex-wrap">
+        <span class="text-white font-bold text-xl">MAIN PARTNERS</span>
+        <img src="./images/nike5.png" class="w-28" alt="nike" />
+        <img src="./images/spotify.png" class="w-28" alt="nike" />
+        <span class="text-white font-bold text-2xl">AMBILIGHT tv</span>
+      </div>
+    </section>
+    <!-- Main Partner Section Ends -->
+
+    <!-- Barca Tickets Section Starts -->
+
+    <section class="w-full bg-white mt-5">
+      <h2 class="font-bold text-4xl text-center text-red-900">Barça Tickets</h2>
+      <div
+        class="flex items-center justify-center cursor-pointer flex-wrap pt-5 gap-3"
+      >
+        <div
+          class="w-56 py-2 transition transform hover:-translate-y-5 motion-reduce:transition-none motion-reduce:hover:transform-none"
+        >
+          <img src="./images/t1.jpg" alt="ticket-1" />
+          <p class="font-bold -mt-16 text-yellow-500 text-xl pl-5">
+            MEN'S <br />
+            FOOTBALL >>
+          </p>
+        </div>
+        <div
+          class="w-56 py-2 transition transform hover:-translate-y-5 motion-reduce:transition-none motion-reduce:hover:transform-none"
+        >
+          <img src="./images/t8.jpg" alt="ticket-1" />
+          <p class="font-bold -mt-16 text-yellow-500 text-xl pl-5">
+            BARCA <br />
+            ATLETIC >>
+          </p>
+        </div>
+        <div
+          class="w-56 py-2 transition transform hover:-translate-y-5 motion-reduce:transition-none motion-reduce:hover:transform-none"
+        >
+          <img src="./images/t3.jpg" alt="ticket-1" />
+          <p class="font-bold -mt-12 text-yellow-500 text-xl pl-5">
+            BASKETBALL >>
+          </p>
+        </div>
+        <div
+          class="w-56 py-2 transition transform hover:-translate-y-5 motion-reduce:transition-none motion-reduce:hover:transform-none"
+        >
+          <img src="./images/t4.jpg" alt="ticket-1" />
+          <p class="font-bold -mt-16 text-yellow-500 text-xl pl-5">
+            WOMEN'S <br />
+            FOOTBALL >>
+          </p>
+        </div>
+        <div
+          class="w-56 py-2 transition transform hover:-translate-y-5 motion-reduce:transition-none motion-reduce:hover:transform-none"
+        >
+          <img src="./images/t5.jpg" alt="ticket-1" />
+          <p class="font-bold -mt-12 text-yellow-500 text-xl pl-5">FUTSAL >></p>
+        </div>
+        <div
+          class="w-56 py-2 transition transform hover:-translate-y-5 motion-reduce:transition-none motion-reduce:hover:transform-none"
+        >
+          <img src="./images/t6.jpg" alt="ticket-1" />
+          <p class="font-bold -mt-12 text-yellow-500 text-xl pl-5">
+            HANDBALL >>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Barca Tickets Section Ends -->
+
+    <!-- Barca Store Section Starts -->
+
+    <section class="w-full bg-white mt-12 pb-10">
+      <h2 class="font-bold text-4xl text-center text-red-900">
+        Barça Store Spotify Camp Nou
+      </h2>
+
+      <div
+        class="flex mt-5 items-center justify-center gap-3 flex-wrap drop-shadow-2xl cursor-pointer"
+      >
+        <div class="w-80 rounded-lg border-2 border-slate-300">
+          <img src="./images/sth1.webp" class="rounded-t-lg" alt="store-1" />
+          <div class="flex">
+            <img
+              src="./images/st-img1.webp"
+              class="w-32 pt-3 pl-3"
+              alt="st-img1"
+            />
+            <span class="font-bold text-xl pt-5 pl-3">
+              23/24 HOME KIT - <br />
+              MEN
+              <p class="text-sm pt-5 text-slate-500">Here to lead the way</p>
+            </span>
+          </div>
+          <p class="font-bold italic text-blue-900 text-center pt-3">
+            SHOP NOW
+          </p>
+        </div>
+        <div class="w-80 rounded-lg border-2 border-slate-300">
+          <img src="./images/sth2.webp" class="rounded-t-lg" alt="store-1" />
+          <div class="flex">
+            <img
+              src="./images/st-img2.webp"
+              class="w-32 pt-3 pl-3"
+              alt="st-img1"
+            />
+            <span class="font-bold text-xl pt-5 pl-3">
+              23/24 HOME KIT – <br />
+              WOMEN
+              <p class="text-sm pt-5 text-slate-500">
+                The jersey that will make us live an unforgettable season
+              </p>
+            </span>
+          </div>
+          <p class="font-bold italic text-blue-900 text-center pt-3">
+            SHOP NOW
+          </p>
+        </div>
+        <div class="w-80 rounded-lg border-2 border-slate-300">
+          <img src="./images/sth1.webp" class="rounded-t-lg" alt="store-1" />
+          <div class="flex">
+            <img
+              src="./images/st-img3.webp"
+              class="w-32 pt-3 pl-3"
+              alt="st-img1"
+            />
+            <span class="font-bold text-xl pt-5 pl-3">
+              23/24 HOME KIT – <br />
+              LITTLE CULERS
+              <p class="text-sm pt-5 text-slate-500">
+                Also available for our younger fans
+              </p>
+            </span>
+          </div>
+          <p class="font-bold italic text-blue-900 text-center pt-3">
+            SHOP NOW
+          </p>
+        </div>
+        <div class="w-80 rounded-lg border-2 border-slate-300">
+          <img src="./images/sth3.webp" class="rounded-t-lg" alt="store-1" />
+          <div class="flex">
+            <img
+              src="./images/st-img4.webp"
+              class="w-32 pt-3 pl-3"
+              alt="st-img1"
+            />
+            <span class="font-bold text-xl pt-5 pl-3">
+              ESSENTIALS <br />
+              COLLECTION
+              <p class="text-sm pt-5 text-slate-500">
+                Versatile and comfortable garments crafted for your everyday
+                life
+              </p>
+            </span>
+          </div>
+          <p class="font-bold italic text-blue-900 text-center pt-3">
+            SHOP NOW
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Barca Store Section Ends -->
+
+    <!-- Only For Culers Section Starts -->
+
+    <section class="w-full bg-white mt-5">
+      <h2 class="font-bold text-4xl text-center text-red-900">
+        Only For Culers
+      </h2>
+      <div
+        class="flex items-center justify-center flex-wrap gap-3 pt-5 cursor-pointer"
+      >
+        <div class="w-56 rounded-lg">
+          <img src="./images/cul1.webp" class="rounded-lg" alt="cul-1" />
+        </div>
+        <div class="w-56 rounded-lg">
+          <img src="./images/cul2.webp" class="rounded-lg" alt="cul-2" />
+        </div>
+        <div class="w-56 rounded-lg">
+          <img src="./images/cul3.webp" class="rounded-lg" alt="cul-3" />
+        </div>
+        <div class="w-56 rounded-lg">
+          <img src="./images/cul4.webp" class="rounded-lg" alt="cul-4" />
+        </div>
+        <div class="w-56 rounded-lg">
+          <img src="./images/cul5.webp" class="rounded-lg" alt="cul-5" />
+        </div>
+      </div>
+    </section>
+    <!-- Only For Culers Section Ends -->
+
+    <!-- Barca News Section Starts -->
+
+    <section class="w-full mt-14 bg-white mb-3">
+      <h2 class="font-bold text-4xl text-center text-red-900">Barça News</h2>
+      <div class="flex pt-10 justify-center flex-wrap gap-3">
+        <div
+          class="w-80 cursor-pointer border-1 border-gray-500 drop-shadow-2xl shadow"
+        >
+          <img
+            src="./images/news-img1.webp"
+            class="rounded-lg"
+            alt="news=img1"
+          />
+          <p class="font-bold text-xl text-center pt-5">
+            Ilkay Gündoğan arrives in Barcelona
+          </p>
+          <p class="text-center font-semibold text-slate-500 p-1">
+            The midfielder is in the city ahead of Monday's presentation...
+          </p>
+        </div>
+        <div
+          class="w-80 cursor-pointer border-1 border-gray-500 drop-shadow-2xl shadow"
+        >
+          <img
+            src="./images/news-img2.webp"
+            class="rounded-lg"
+            alt="news=img1"
+          />
+          <p class="font-bold text-xl text-center pt-5">
+            Ilkay Final session of the week
+          </p>
+          <p class="text-center font-semibold text-slate-500 p-1">
+            All available Barça players train on Saturday morning at...
+          </p>
+        </div>
+        <div
+          class="w-80 cursor-pointer border-1 border-gray-500 drop-shadow-2xl shadow"
+        >
+          <img
+            src="./images/news-img3.webp"
+            class="rounded-lg"
+            alt="news=img1"
+          />
+          <p class="font-bold text-xl text-center pt-5">
+            Preparations progressing
+          </p>
+          <p class="text-center font-semibold text-slate-500 p-1">
+            A double Friday training session for Barça, with...
+          </p>
+        </div>
+        <div
+          class="w-80 cursor-pointer border-1 border-gray-500 drop-shadow-2xl shadow"
+        >
+          <img
+            src="./images/news-img4.webp"
+            class="rounded-lg"
+            alt="news=img1"
+          />
+          <p class="font-bold text-xl text-center pt-5">Tobey to leave Barça</p>
+          <p class="text-center font-semibold text-slate-500 p-1">
+            The US center's contract with the Club comes to an end...
+          </p>
+        </div>
+        <div
+          class="w-80 cursor-pointer border-1 border-gray-500 drop-shadow-2xl shadow"
+        >
+          <img
+            src="./images/news-img5.webp"
+            class="rounded-lg"
+            alt="news=img1"
+          />
+          <p class="font-bold text-xl text-center pt-5">
+            INSIDE VIEW: Inigo Martinez' presentation
+          </p>
+          <p class="text-center font-semibold text-slate-500 p-1">
+            The Club's cameras captured a behind the scenes look...
+          </p>
+        </div>
+        <div
+          class="w-80 cursor-pointer border-1 border-gray-500 drop-shadow-2xl shadow"
+        >
+          <img
+            src="./images/news-img6.webp"
+            class="rounded-lg"
+            alt="news=img1"
+          />
+          <p class="font-bold text-xl text-center pt-5">
+            Roger Grimau presented as Barça basketball coach
+          </p>
+          <p class="text-center font-semibold text-slate-500 p-1">
+            The former Barça player is unveiled at the Auditori 1899 as...
+          </p>
+        </div>
+        <div
+          class="w-80 cursor-pointer border-1 border-gray-500 drop-shadow-2xl shadow"
+        >
+          <img
+            src="./images/news-img7.webp"
+            class="rounded-lg"
+            alt="news=img1"
+          />
+          <p class="font-bold text-xl text-center pt-5">
+            Barça women to visit Mexico on preseason tour
+          </p>
+          <p class="text-center font-semibold text-slate-500 p-1">
+            European champions to face the Club América and Tigres women's
+            teams...
+          </p>
+        </div>
+        <div
+          class="w-80 cursor-pointer border-1 border-gray-500 drop-shadow-2xl shadow"
+        >
+          <img
+            src="./images/news-img8.webp"
+            class="rounded-lg"
+            alt="news=img1"
+          />
+          <p class="font-bold text-xl text-center pt-5">
+            The pace continues at the Ciutat Esportiva
+          </p>
+          <p class="text-center font-semibold text-slate-500 p-1">
+            Xavi Hernández's squad take part in another morning session local
+            time...
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Barca News Section Ends -->
+    <!-- Barca Picture Culer Section Starts -->
+    <section class="w-full mt-12">
+      <div class="w-full">
+        <img
+          src="./images/culers-main-5.webp"
+          class="w-full"
+          alt="culer-main"
+        />
+        <h2
+          class="font-bold text-xl media480:text-3xl md:text-5xl text-yellow-500 text-center -mt-14 media480:-mt-20 md:-mt-32 media980:-mt-48"
+        >
+          WIN THE NEW KIT!
+        </h2>
+        <p
+          class="text-center font-semibold media480:font-bold text-xl text-white media480:pt-1"
+        >
+          Season 23/24
+        </p>
+        <div class="w-full p-3 bg-gradient-to-r from-pink-900 to-red-300">
+          <div class="mx-auto w-60 mt-3 media980:mt-5">
+            <button
+              class="px-9 py-1 ml-10 font-semibold text-white bg-red-700 rounded"
+            >
+              TAKE PART
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Barca Picture Culer Section Ends -->
+
+    <!-- Games and Features Section Starts -->
+    <section class="w-full bg-white">
+      <h2 class="font-bold text-4xl text-center text-red-900 mt-28">
+        Games & Features
+      </h2>
+      <div class="flex justify-center flex-wrap bg-white p-10 gap-3">
+        <div class="w-[28rem] py-5">
+          <img src="./images/games-1.webp" alt="game-1" />
+
+          <p
+            class="media480:font-bold text-xl media480:text-3xl text-yellow-500 text-center -mt-16"
+          >
+            All about the US Tour
+          </p>
+        </div>
+        <div class="w-[28rem] py-5">
+          <img src="./images/game-2.webp" alt="game-1" />
+
+          <p
+            class="media480:font-bold text-xl media480:text-2xl text-yellow-500 text-center -mt-16"
+          >
+            The FC Barcelona transfer market
+          </p>
+        </div>
+        <div class="w-[28rem] py-5">
+          <img src="./images/game-3.webp" alt="game-1" />
+
+          <p
+            class="font-semibold media480:font-bold media480:text-xl text-yellow-500 text-center -mt-16"
+          >
+            Last dance for Sergio Busquets and Jordi Alba
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Games and Features Section Ends -->
+
+    <!-- Players Section Starts -->
+    <section class="w-full pt-5 bg-blue-950">
+      <h2 class="font-bold text-5xl text-center text-white pt-3">Players</h2>
+      <div class="swiper mySwiper2 py-10">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/pl-1.webp" alt="player-1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/pl-2.webp" alt="player-1" />
+            >
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/pl-3.webp" alt="player-1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/pl-4.webp" alt="player-1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/pl-5.webp" alt="player-1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/pl-6.webp" alt="player-1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/pl-7.webp" alt="player-1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/pl-8.webp" alt="player-1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/pl-9.webp" alt="player-1" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Players Section Ends -->
+
+    <!-- Trophy Section Starts -->
+
+    <section class="w-full bg-blue-950 py-5">
+      <div class="flex items-center justify-center flex-wrap gap-3">
+        <div
+          class="w-96 bg-[url('../images/tropy.jpg')] p-2 flex items-center justify-center"
+        >
+          <span class="text-white font-bold p-3">La Liga</span>
+          <i class="fa-solid fa-trophy" style="color: #d0b60b"></i>
+          <span class="text-yellow-300 font-bold pl-2">27</span>
+          <span class="text-white font-bold p-3">TITLES</span>
+        </div>
+        <div
+          class="w-96 bg-[url('../images/tropy.jpg')] p-2 flex items-center justify-center"
+        >
+          <span class="text-white font-bold p-3">UEFA Champions League</span>
+          <i class="fa-solid fa-trophy" style="color: #d0b60b"></i>
+          <span class="text-yellow-300 font-bold pl-2">5</span>
+          <span class="text-white font-bold p-3">TROPHIES</span>
+        </div>
+        <div
+          class="w-96 bg-[url('../images/tropy.jpg')] p-2 flex items-center justify-center"
+        >
+          <span class="text-white font-bold p-3">FIFA Club World Cup</span>
+          <i class="fa-solid fa-trophy" style="color: #d0b60b"></i>
+          <span class="text-yellow-300 font-bold pl-2">3</span>
+          <span class="text-white font-bold p-3">TROPHIES</span>
+        </div>
+        <div
+          class="w-96 bg-[url('../images/tropy.jpg')] p-2 flex items-center justify-center"
+        >
+          <span class="text-white font-bold p-3">Copa Del Rey</span>
+          <i class="fa-solid fa-trophy" style="color: #d0b60b"></i>
+          <span class="text-yellow-300 font-bold pl-2">31</span>
+          <span class="text-white font-bold p-3">TROPHIES</span>
+        </div>
+      </div>
+    </section>
+    <!-- Trophy Section Ends -->
+
+    <!-- Footer Partner Section Starts -->
+    <section class="w-full bg-blue-950 py-3">
+      <h2 class="media480:font-bold text-3xl text-white text-center p-1">
+        FC BARCELONA
+      </h2>
+      <div class="flex items-center justify-around py-10 flex-wrap">
+        <img src="./images/nike5.png" class="w-72 py-2" alt="nike" />
+        <img src="./images/spotify.png" class="w-72 py-2" alt="spotify" />
+        <span class="font-bold text-white text-3xl py-2">AMBILIGHT tv</span>
+      </div>
+    </section>
+    <!-- Footer Partner Section Ends -->
+
+    <!-- Social Media Section Starts -->
+    <section class="w-full py-3 bg-blue-950 cursor-pointer">
+      <h2 class="media480:font-bold text-xl text-white text-center p-1">
+        Follow FC Barcelona on social media
+      </h2>
+      <div class="flex justify-center flex-wrap gap-3 pt-5">
+        <div class="w-36 bg-blue-500 p-3">
+          <i class="fa-brands fa-square-facebook" style="color: #dcdfe5"></i>
+          <span class="text-white p-1 font-semibold">FC Barcelona</span>
+          <span class="text-white p-1 font-semibold">@fcbarcelona</span>
+        </div>
+        <div class="w-36 bg-sky-500 p-3">
+          <i class="fa-brands fa-twitter" style="color: #dcdfe5"></i>
+          <span class="text-white p-1 font-semibold">FC Barcelona</span>
+          <span class="text-white p-1 font-semibold">@fcbarcelona</span>
+        </div>
+        <div class="w-36 bg-green-500 p-3">
+          <i class="fa-brands fa-spotify"></i>
+          <span class="text-white p-1 font-semibold">Spotify</span>
+          <span class="text-white p-1 font-semibold">@spotify</span>
+        </div>
+        <div class="w-36 bg-red-600 p-3">
+          <i class="fa-brands fa-youtube" style="color: #c5ccd8"></i>
+          <span class="text-white p-1 font-semibold">FC Barcelona</span>
+          <span class="text-white p-1 font-semibold">Youtube</span>
+        </div>
+        <div class="w-36 bg-pink-400 p-3">
+          <i class="fa-brands fa-instagram" style="color: #ced4de"></i>
+          <span class="text-white p-1 font-semibold">FC Barcelona</span>
+          <span class="text-white p-1 font-semibold">@fcbarcelona</span>
+        </div>
+        <div class="w-36 bg-black p-3">
+          <i class="fa-brands fa-tiktok" style="color: #d9dfe7"></i>
+          <span class="text-white p-1 font-semibold">FC Barcelona</span>
+          <span class="text-white p-1 font-semibold">Tik Tok</span>
+        </div>
+      </div>
+    </section>
+    <!-- Social Media Section Ends -->
+
+    <!-- Footer Section Starts -->
+    <section class="w-full bg-blue-950 pt-3 cursor-pointer">
+      <div class="flex py-3 px-2 justify-center flex-wrap gap-5">
+        <div class="w-44 py-3">
+          <p class="text-white font-bold text-2xl py-5">Goalkeepers</p>
+          <p class="text-gray-300 py-3">Marc-André ter Stegen</p>
+          <p class="text-gray-300 py-3">Iñaki Peña</p>
+        </div>
+        <div class="w-44 py-3">
+          <p class="text-white font-bold text-2xl py-5">Defenders</p>
+          <p class="text-gray-300 py-3">Ronald Araujo</p>
+          <p class="text-gray-300 py-3">Andreas Christensen</p>
+          <p class="text-gray-300 py-3">Marcos Alonso</p>
+          <p class="text-gray-300 py-3">Jules Kounde</p>
+          <p class="text-gray-300 py-3">Eric Garcia</p>
+          <p class="text-gray-300 py-3">Iñigo Martínez</p>
+        </div>
+        <div class="w-44 py-3">
+          <p class="text-white font-bold text-2xl py-5">Midfielders</p>
+          <p class="text-gray-300 py-3">Gavi</p>
+          <p class="text-gray-300 py-3">Pedri</p>
+          <p class="text-gray-300 py-3">Franck Kessie</p>
+          <p class="text-gray-300 py-3">Sergi Roberto</p>
+          <p class="text-gray-300 py-3">Frenkie de Jong</p>
+          <p class="text-gray-300 py-3">Ilkay Gündoğan</p>
+        </div>
+        <div class="w-44 py-3">
+          <p class="text-white font-bold text-2xl py-5">Forwards</p>
+          <p class="text-gray-300 py-3">Ousmane Dembélé</p>
+          <p class="text-gray-300 py-3">Robert Lewandowski</p>
+          <p class="text-gray-300 py-3">Ansu Fati</p>
+          <p class="text-gray-300 py-3">Ferran Torres</p>
+          <p class="text-gray-300 py-3">Raphinha</p>
+        </div>
+        <div class="w-44 py-3">
+          <p class="text-white font-bold text-2xl py-5">Barça Products</p>
+          <p class="text-gray-300 py-3">Culers Membership</p>
+          <p class="text-gray-300 py-3">Barça TV+</p>
+          <p class="text-gray-300 py-3">TV Apps</p>
+          <p class="text-gray-300 py-3">Tickets & Museum</p>
+          <p class="text-gray-300 py-3">Barça App</p>
+          <p class="text-gray-300 py-3">Online store</p>
+          <p class="text-gray-300 py-3">Support/FAQs</p>
+          <p class="text-gray-300 py-3">Become Beta Tester</p>
+          <p class="text-gray-300 py-3">Black Friday</p>
+          <p class="text-gray-300 py-3">Christmas Barça</p>
+        </div>
+        <div class="w-44 py-3">
+          <p class="text-white font-bold text-2xl py-5">Club</p>
+          <p class="text-gray-300 py-3">Spotify Camp Nou</p>
+          <p class="text-gray-300 py-3">Ethical Channel</p>
+          <p class="text-gray-300 py-3">The Crest</p>
+          <p class="text-gray-300 py-3">Anthem</p>
+          <p class="text-gray-300 py-3">Work at the Barça Stores</p>
+        </div>
+        <div class="w-44 py-3">
+          <p class="text-white font-bold text-2xl py-5">History</p>
+          <p class="text-gray-300 py-3">
+            2008-16. The best years in our history
+          </p>
+          <p class="text-gray-300 py-3">The era of the Dream Team</p>
+          <p class="text-gray-300 py-3">1950-1961. The Kubala era</p>
+          <p class="text-gray-300 py-3">1899-1909. Foundation and survival</p>
+          <p class="text-gray-300 py-3">Barça in the Campions League</p>
+        </div>
+      </div>
+      <div
+        class="w-48 media480:w-72 flex items-center flex-wrap gap-2 py-5 pl-2"
+      >
+        <img src="./images/logo.png" class="w-20" alt="footer-logo" />
+        <span class="text-white font-bold text-xl">FC BARCELONA</span>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-3 pl-2">
+        <p class="text-white font-semibold py-3">
+          © Copyright FC Barcelona Official website of FC Barcelona
+        </p>
+        <p class="text-white">Legal Terms |</p>
+        <p class="text-white">Privacy Policy |</p>
+        <p class="text-white">Cookies |</p>
+        <p class="text-white">Accessibility |</p>
+        <p class="text-white">Contact Us |</p>
+        <p class="text-white">Support/FAQs |</p>
+      </div>
+      <!-- Border div Starts -->
+      <div
+        class="w-full p-2 bg-gradient-to-r from-pink-900 to-violet-500"
+      ></div>
+      <!-- Border div Ends -->
+    </section>
+    <!-- Footer Section Ends -->
+      <h2 class="text-white bg-black text-center font-bold text-xl py-2">Made By KAPIL SARKAR</h2>
+  </body>
+</html>

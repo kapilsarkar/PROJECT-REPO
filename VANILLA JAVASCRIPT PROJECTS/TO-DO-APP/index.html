@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>T0-DO-APP</title>
+  </head>
+  <body>
+    <!-- <h1 class="heading">TO DO-APP</h1> -->
+    <!-- Work Type Section -->
+
+    <div class="name">
+      <img src="./images/nameImg2.gif" class="nameImg" alt="name" />
+      <h2 class="nameHead">Enter Your Name:</h2>
+
+      <input type="text" class="nameBox" placeholder="Enter Your Name" />
+      <button class="nameBtn">ADD</button>
+      <p class="nameTxt"></p>
+      <p class="dateTime"></p>
+    </div>
+    <section class="all-task">
+      <section class="work-type">
+        <div class="taskAddSection">
+          <span class="close-icon">&times;</span>
+          <h3 class="taskAddHead">
+            Add Your Task
+            <img src="./images/addtaskImg.gif" class="taskAddImg" alt="" />
+          </h3>
+          <div class="taskAdd">
+            <input
+              type="text"
+              class="taskAddInput"
+              placeholder="Add your task"
+            />
+            <h3 class="taskAddCategory">Pick a Category</h3>
+            <div class="categoryList">
+              <form id="form">
+                <label for="home">
+                  <input type="radio" name="category" value="home"  id="home" />
+                  <span>Home</span>
+                </label>
+                <label for="work">
+                  <input type="radio" name="category" value="work"  id="work" />
+                  <span>Work</span>
+                </label>
+                <label for="other">
+                  <input type="radio"  name="category" value="other" id="other" />
+                  <span>Other</span>
+                </label>
+              </form>
+              <span class="taskResult"></span>
+            </div>
+           
+            <button class="taskAddBtn">+ Add Task</button>
+          
+            <button class="showAllBtn">+ Show All Task</button>
+            <img src="./images/work2.gif" class="newImgTask" alt="img" />
+          </div>
+        </div>
+        <div class="taskShow">
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

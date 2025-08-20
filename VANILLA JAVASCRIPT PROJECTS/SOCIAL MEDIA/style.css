@@ -1,0 +1,215 @@
+body {
+  background-color: #233232;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+.head {
+  text-align: center;
+  background-color: rgb(245, 19, 57);
+  padding: 10px;
+  margin-top: -0.3px;
+}
+.container {
+  max-width: 1250px;
+  border: 1px solid rgb(228, 8, 180);
+  min-height: 100vh;
+  border-radius: 3px;
+  margin-inline: auto;
+  box-shadow: 3px 5px 5px 3px rgb(154, 238, 8);
+  
+}
+.social-stars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+.star1 {
+  border-radius: 50%;
+  border: 3px solid rgb(227, 9, 82);
+  max-width: 200px;
+  background: url("./images/hrithick.gif");
+  background-position: center;
+  padding: 70px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.start1btn {
+  background-color: rgb(13, 13, 217);
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.star2 {
+  border-radius: 50%;
+  border: 3px solid rgb(227, 9, 82);
+  max-width: 200px;
+  background: url("./images/virat.jpeg");
+  background-position: center;
+  padding: 70px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.start2btn {
+  background-color: rgb(13, 13, 217);
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.star3 {
+  border-radius: 50%;
+  border: 3px solid rgb(227, 9, 82);
+  max-width: 200px;
+  background: url("./images/srk2.avif");
+  background-position: center;
+  padding: 70px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.start3btn {
+  background-color: rgb(13, 13, 217);
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.star4 {
+  border-radius: 50%;
+  border: 3px solid rgb(227, 9, 82);
+  max-width: 200px;
+  background: url("./images/sachin1.webp");
+  background-position: center;
+  padding: 70px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.start4btn {
+  background-color: rgb(13, 13, 217);
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.star5 {
+  border-radius: 50%;
+  border: 3px solid rgb(227, 9, 82);
+  max-width: 200px;
+  background: url("./images/johncena5.gif");
+  background-position: center;
+  padding: 70px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.start5btn {
+  background-color: rgb(13, 13, 217);
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.star6 {
+  border-radius: 50%;
+  border: 3px solid rgb(227, 9, 82);
+  max-width: 200px;
+  background: url("./images/aki.jpg");
+  background-position: center;
+  padding: 70px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.start6btn {
+  background-color: rgb(13, 13, 217);
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.star7 {
+  border-radius: 50%;
+  border: 3px solid rgb(227, 9, 82);
+  max-width: 200px;
+  background: url("./images/amit1.avif");
+  background-position: center;
+  padding: 70px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.start7btn {
+  background-color: rgb(13, 13, 217);
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#tick {
+  color: #fff;
+  background-color: rgb(14, 14, 225);
+  border-radius: 50%;
+  padding: 3.2px;
+  margin-left: 5px;
+  border-style: dashed;
+}
+#social-starsPic1 {
+  margin-top: 3px;
+  background-position: center;
+  min-height: 380px;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+.social-starsPicName {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 700;
+  padding-top: 1rem;
+}
+.socialCount1 {
+  margin-top: 1rem;
+  padding: 2px 3px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+#IconLike1 {
+  /* color: #e72e0d; */
+  font-size: 2rem;
+  cursor: pointer;
+}
+#IconDisLike1 {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.comment1 {
+  font-size: 2rem;
+  cursor: pointer;
+  /* display: flex; */
+}
+.List1 {
+  font-size: 1.2rem;
+  padding: 1px 2px;
+  border-radius: 12px;
+}
+.Start1comments {
+  display: grid;
+  font-size: 1.2rem;
+}
+
+/* #IconComment1{
+  color: rgb(2, 32, 2);
+  font-size: 1.5rem;
+} */
+
+

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jio Cinema Clone</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="shortcut icon" href="./images/jc_logo.svg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+      defer
+    ></script>
+    <link rel="stylesheet" href="./sliderstyle.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="bg-black text-white">
+    <!-- Header section starts -->
+    <header
+      class="max-w-[1440px] py-3 flex items-center text-center px-3 media890:px-6 cursor-pointer"
+    >
+      <img
+        src="./images/jc_logo.svg"
+        class="w-6 media890:w-12 cursor-pointer"
+        alt="logo"
+      />
+      <h3 class="font-bold text-sm media890:text-2xl px-3">JioCinema</h3>
+      <div
+        class="py-1 media890:py-2 px-3 media890:px-4 border-solid border-2 border-yellow-500 rounded-3xl cursor-pointer"
+      >
+        <p class="text-yellow-500 text-sm font-bold">Subscribe</p>
+      </div>
+      <div
+        class="py-2 px-4 ml-2 border-solid border-2 border-white rounded-3xl media890:block hidden cursor-pointer"
+      >
+        <p class="text-white text-sm font-bold cursor-pointer">For You</p>
+      </div>
+      <div class="py-2 px-4 ml-2 media890:block hidden cursor-pointer">
+        <p class="text-white text-sm font-bold">Sports</p>
+      </div>
+      <div class="py-2 px-4 ml-2 media890:block hidden cursor-pointer">
+        <p class="text-white text-sm font-bold">Free</p>
+      </div>
+      <div class="py-2 px-4 ml-2 media890:block hidden cursor-pointer">
+        <p class="text-white text-sm font-bold">Premium</p>
+      </div>
+
+      <div
+        class="px-2 py-4 cursor-pointer border-2 border-gray-500 rounded-3xl media890:block hidden"
+      >
+        <input
+          type="search"
+          class="text-white w-40 bg-transparent font-bold"
+          placeholder="Search"
+        />
+      </div>
+      <img
+        src="./images/Vector (1).svg"
+        class="cursor-pointer relative right-5 media890:block hidden"
+        alt="img"
+      />
+      <img
+        src="./images/profile_avatar.svg"
+        class="cursor-pointer w-12 ml-1 pl-3 media890:block hidden"
+        alt="img"
+      />
+      <img
+        src="./images/search (1).svg"
+        class="inline-block media890:hidden pl-5"
+        alt="img"
+      />
+    </header>
+    <!-- Header section ends -->
+    <!-- Hero section starts -->
+    <section class="w-full">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">Asur 2</div>
+            <button class="btn">Watch</button>
+            <img src="./images/asur2.jpg" alt="img" />
+          </div>
+
+          <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">Bloody Daddy</div>
+            <button class="btn">Watch</button>
+            <img src="./images/img2.jpg" alt="img" />
+          </div>
+          <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">
+              Sergeant | Official Teaser
+            </div>
+            <button class="btn">Watch</button>
+            <img src="./images/img-6.jpg" alt="img" />
+          </div>
+          <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">Bhediya</div>
+            <button class="btn cursor-pointer">Watch</button>
+            <img src="./images/img4.jpg" alt="img" />
+          </div>
+          <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">
+              IIFA Awards 2023
+            </div>
+            <button class="btn">Watch</button>
+            <img src="./images/img5.jpg" alt="img" />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- Hero section ends -->
+
+    <!-- Hot right now section starts -->
+
+    <section class="w-full  py-3 pl-5">
+      <p class="text-white text-3xl font-bold py-2">Hot Right Now 🔥</p>
+      <div class="py-5 flex flex-col md:flex-row gap-2 cursor-pointer">
+        <div class="md:w-96 w-full mt-3 md:mt-0">
+          <img src="./images/hot1.webp" class="w-full" alt="img" />
+        </div>
+        <div class="md:w-96 w-full mt-3 md:mt-0">
+          <img src="./images/hot2.webp" class="w-full" alt="img" />
+        </div>
+      </div>
+    </section>
+    <!-- Hot right now section ends -->
+
+    <!-- Trending section starts -->
+    <section class="w-full  py-3 pl-5">
+      <p class="text-white text-3xl font-bold py-2">Trending In India</p>
+      <div class="w-full max-w-full flex flex-wrap gap-2 py-5 cursor-pointer">
+        <div class="w-32 py-2">
+          <img src="./images/asurnew.webp" class="rounded-2xl" alt="img" />
+          <p class="font-bold text-7xl text-center -mt-9">1</p>
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/trend2.webp" class="rounded-2xl" alt="img" />
+          <p class="font-bold text-7xl text-center -mt-9">2</p>
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/trend3.webp" class="rounded-2xl" alt="img" />
+          <p class="font-bold text-7xl text-center -mt-9">3</p>
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/tren4.webp" class="rounded-2xl" alt="img" />
+          <p class="font-bold text-7xl text-center -mt-9">4</p>
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/trend5.webp" class="rounded-2xl" alt="img" />
+          <p class="font-bold text-7xl text-center -mt-9">5</p>
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/tren6.jpg" class="rounded-2xl" alt="img" />
+          <p class="font-bold text-7xl text-center -mt-9">6</p>
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/trend7.webp" class="rounded-2xl" alt="img" />
+          <p class="font-bold text-7xl text-center -mt-9">7</p>
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/trend8.webp" class="rounded-2xl" alt="img" />
+          <p class="font-bold text-7xl text-center -mt-9">8</p>
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/trend9.jpg" class="rounded-2xl" alt="img" />
+          <p class="font-bold text-7xl text-center -mt-9">9</p>
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/trend10.webp" class="rounded-2xl" alt="img" />
+          <p class="font-bold text-7xl text-center -mt-9">10</p>
+        </div>
+      </div>
+    </section>
+    <!-- Trending section ends -->
+
+    <!-- Popular section starts -->
+    <section class="w-full  py-3 pl-5">
+      <p class="text-white text-3xl font-bold py-2">Popular Hindi Movies</p>
+      <div class="w-full max-w-full flex flex-wrap gap-2 py-5 cursor-pointer">
+        <div class="w-32 py-2">
+          <img src="./images/pp1.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/pp2.jpg" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/pp3.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/pp4.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/pp5.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/pp6.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/pp7.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/pp8.jpg" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/pp9.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/pp10.webp" class="rounded-2xl" alt="img" />
+        </div>
+      </div>
+    </section>
+    <!-- Popular section ends -->
+
+    <!-- Top-Rated section starts -->
+    <section class="w-full  py-3 pl-5">
+      <p class="text-white text-3xl font-bold py-2">Top-Rated Originals 🌟</p>
+      <div class="w-full max-w-full flex flex-wrap gap-2 py-5 cursor-pointer">
+        <div class="w-32 py-2">
+          <img src="./images/top1.avif" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/top2.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/top3.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/top4.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/top5.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/top6.jpg" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/top7.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/top8.jpg" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/top9.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/top10.jpg" class="rounded-2xl" alt="img" />
+        </div>
+      </div>
+    </section>
+    <!-- Top-Rated section ends -->
+
+    <!-- TV section starts -->
+    <section class="w-full  py-3 pl-5">
+      <p class="text-white text-3xl font-bold py-2">Fresh TV Episodes 📺</p>
+      <div class="w-full max-w-full flex flex-wrap gap-2 py-5 cursor-pointer">
+        <div class="w-32 py-2">
+          <img src="./images/tv1.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/tv2.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/tv3.jpg" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/tv4.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/tv5.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/tv6.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/tv7.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/tv8.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/tv9.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-32 py-2">
+          <img src="./images/tv10.webp" class="rounded-2xl" alt="img" />
+        </div>
+      </div>
+    </section>
+    <!-- TV section ends -->
+
+    <!-- Studio section starts -->
+
+    <section class="w-full  py-3 pl-5">
+      <p class="text-white text-3xl font-bold py-2">Top Global Studios</p>
+      <div class="py-5 flex flex-col md:flex-row gap-2 cursor-pointer">
+        <div class="md:w-96 w-full mt-3 md:mt-0">
+          <img src="./images/gl1.webp" class="w-full" alt="img" />
+        </div>
+        <div class="md:w-96 w-full mt-3 md:mt-0">
+          <img src="./images/gl2.webp" class="w-full" alt="img" />
+        </div>
+      </div>
+    </section>
+    <!-- Studio section ends -->
+
+    <!-- Language section starts -->
+    <section class="w-full  py-3 pl-5">
+      <p class="text-white text-3xl font-bold py-2">Watch In Your Language</p>
+      <div class="w-full max-w-full flex flex-wrap gap-2 py-5 cursor-pointer">
+        <div class="w-36 py-2">
+          <img src="./images/l1.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-36 py-2">
+          <img src="./images/l2.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-36 py-2">
+          <img src="./images/l3.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-36 py-2">
+          <img src="./images/l4.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-36 py-2">
+          <img src="./images/l5.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-36 py-2">
+          <img src="./images/l6.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-36 py-2">
+          <img src="./images/l7.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-36 py-2">
+          <img src="./images/l8.webp" class="rounded-2xl" alt="img" />
+        </div>
+        <div class="w-36 py-2">
+          <img src="./images/l9.webp" class="rounded-2xl" alt="img" />
+        </div>
+        </div>
+    </section>
+      <!-- Language section ends -->
+
+      <!-- Ultimate section starts -->
+
+      <section class="w-full  py-3 pl-5">
+        <p class="text-white text-3xl font-bold py-2">The Ultimate Line Up 🍿</p>
+         <div class="w-full max-w-full flex flex-wrap gap-2 py-5 cursor-pointer">
+          <div class="w-36 py-2">
+            <img src="./images/ul1.webp" class="rounded-2xl" alt="img" />
+          </div>
+          <div class="w-36 py-2">
+            <img src="./images/ul2.webp" class="rounded-2xl" alt="img" />
+          </div>
+          <div class="w-36 py-2">
+            <img src="./images/ul3.webp" class="rounded-2xl" alt="img" />
+          </div>
+          <div class="w-36 py-2">
+            <img src="./images/ul4.webp" class="rounded-2xl" alt="img" />
+          </div>
+          <div class="w-36 py-2">
+            <img src="./images/ul5.webp" class="rounded-2xl" alt="img" />
+          </div>
+         </div>
+
+      </section>
+        <!-- Ultimate section ends -->
+
+         <!-- Footer section main starts -->
+        <footer class="w-full bg-slate-900 py-3 pl-1 media320:pl-5 mt-9 pt-9 flex flex-col media890:flex-row flex-wrap justify-between media890:px-12 cursor-pointer">
+
+          <div>
+            <h2 class="font-bold text-2xl mt-4 mb-5">JioCinema</h2>
+            <div class="pt-5 mt-3 pb-5 font-bold text-gray-300">
+              <p>For You</p>
+              <p>Sports</p>
+              <p>Free</p>
+              <p>Premium</p>
+            </div>
+          </div>
+          <div>
+            <h2 class="font-bold text-2xl mt-4 mb-5">Support</h2>
+            <div class="pt-5 mt-3 pb-5 font-bold text-gray-300">
+              <p>Help Center</p>
+              <p>Terms Of Use</p>
+              <p>Privacy Policy</p>
+              <p>Content Complaints</p>
+            </div>
+          </div>
+            <div>
+              <h2 class="text-3xl font-bold">Connect With Us</h2>
+              <div class="flex gap-3 pt-5">
+                <img src="./images/facebook.svg" alt="img">
+                <img src="./images/twitter.svg" alt="img">
+                <img src="./images/instagram.svg" alt="img">
+                <img src="./images/youtube.svg" alt="img">
+              </div>
+            </div>
+            <div>
+              <h2 class="text-3xl font-bold">Download the App</h2>
+              <div class="flex gap-3 pt-5">
+                <img src="./images/googlePlay.svg" alt="img">
+                <img src="./images/appleStore.svg" alt="img">
+              </div>
+            </div>
+            
+        </footer>
+         <!-- Footer section main ends -->
+
+          <!-- Copyright section starts -->
+        <div class="w-full  py-3  px-2">
+          <div class="bg-black py-5 flex  justify-between">
+            <p class="text-xs">Copyright © 2023 Viacom18 Media PVT LTD. All rights reserved.</p>
+            <img src="./images/jio-logo.png" class="w-9" alt="img">
+          </div>
+         
+        </div>       
+        <!-- Copyright section ends -->
+
+        <!-- Footer for tablet and mobile section starts -->
+
+        <section class="w-full block media890:hidden   py-3 bg-black">
+          <div class="flex items-center justify-around flex-wrap gap-6 cursor-pointer">
+            <div>
+               <img src="./images/ic_home_active_nn.svg" class="mx-auto" alt="img">
+               <p class="text-center">For You</p>
+            </div>
+            <div>
+              <img src="./images/ic_sport_inactive_29.svg" class="mx-auto" alt="img">
+              <p class="text-center">Sports</p>
+           </div>
+           <div>
+            <img src="./images/ic_free_nn.svg" class="mx-auto" alt="img">
+            <p class="text-center">Free</p>
+         </div>
+         <div>
+          <img src="./images/ic_premium_inactive_20nn.svg" class="mx-auto" alt="img">
+          <p class="text-center">Premium</p>
+       </div>
+       <div>
+        <img src="./images/ic_settings_nn.svg" class="mx-auto" alt="img">
+        <p class="text-center">More</p>
+     </div>
+          </div>
+        </section>
+         <p class="text-center text-white font-bold py-5">Made by KAPIL SARKAR</p>
+        <!-- Footer for tablet and mobile section ends -->
+  </body>
+</html>

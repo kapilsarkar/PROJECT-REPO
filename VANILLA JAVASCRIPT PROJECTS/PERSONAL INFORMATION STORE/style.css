@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #232323;
+    color: #fff;
+}
+#head-icon{
+    color: #fff;
+    font-size: 30px;
+    padding: 1rem;
+}
+#head-icon2{
+    color: #fff;
+    font-size: 30px;
+    padding: 1rem;
+}
+.main-head{
+    text-align: center;
+   background-color: rgb(154, 10, 10);
+    padding: 5px 10px;
+}
+.heading{
+    text-align: center;
+}
+.container{
+    width: 50%;
+    padding: 10px 20px;
+    border: 2px solid #0ce40c;
+    border-radius: 5px;
+    margin-top: 2rem;
+    margin-left: 1.2rem;
+}
+
+.containerDetails{
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px 10px;
+}
+.fullName{
+    margin-left: 10px;
+    font-size: 18px;
+    padding: 2px 3px;
+}
+.contactNo{
+    font-size: 18px;
+    margin-left: 3px;
+    padding: 2px 3px;
+}
+.email{
+    font-size: 18px;
+    margin-left: 18px;
+    padding: 2px 3px;
+}
+.container-search{
+    width: 50%;
+    padding: 10px 20px;
+    border: 2px solid #0ce40c;
+    border-radius: 5px;
+    margin-top: 2rem;
+    margin-left: 1.2rem;
+}
+.first-Section{
+    display: flex;
+}
+.btnSave{
+    background-color: green;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 20%;
+    cursor: pointer;
+}
+.searchName{
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px 10px;
+}
+.searchBtn{
+    background-color: green;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 20%;
+    cursor: pointer;
+}
+.clearSearchBtn{
+    background-color: green;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 20%;
+    cursor: pointer;
+}
+.searchDetails{
+    padding: 5px 10px;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+    background-color: rgb(167, 9, 9);
+    border-radius: 5px;
+    display: none;
+}
+.searchEmail{
+    padding: 5px 10px;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+    background-color: rgb(167, 9, 9);
+    border-radius: 5px;
+    display: none;
+}
+.personalImg{
+    margin-top: 3px;
+    width: 100%;
+}
+.personalImg img {
+    width: 100%;
+}
+.expense-section{
+    width: 50%;
+    padding: 10px 20px;
+    border: 2px solid #0ce40c;
+    border-radius: 5px;
+    margin-top: 2rem;
+    margin-left: 1.2rem;
+}
+.containerSaveText{
+    width: 50px;
+    height: 50px;
+    background-color: #FFEB3B;
+    border-radius: 16px;
+    position: absolute;
+    box-shadow: 0 5px 4px 2px rgba(0, 0, 0, 0.3);
+    padding: 9px;
+    transform: scale(0);
+    color: #0d5c0d;
+    transition: transform 0.2s ease-in-out;
+    margin-inline: inherit;
+}
+.containerSaveText.open{
+    transform: scale(1);
+}
+.close-icon{
+    font-size: 24px;
+    font-weight: 700;
+    position: absolute;
+    right: 16px;
+    cursor: pointer;
+}
+.containerSaveTextDetails{
+    font-size: 12px;
+    font-weight: 700;
+}
+.secondSectionSaveText{
+    width: 70px;
+    height: 70px;
+    background-color: #FFEB3B;
+    border-radius: 16px;
+    position: absolute;
+    box-shadow: 0 5px 4px 2px rgba(0, 0, 0, 0.3);
+    padding: 9px;
+    transform: scale(0);
+    color: #0d5c0d;
+    transition: transform 0.2s ease-in-out;
+    margin-inline: inherit;
+}
+.secondSectionSaveText.open{
+    transform: scale(1);
+}
+.secondSectionSaveTextDetails{
+    font-size: 12px;
+    font-weight: 700;
+}
+.close-icon2{
+    font-size: 24px;
+    font-weight: 700;
+    position: absolute;
+    right: 16px;
+    cursor: pointer;
+}
+.second-section{
+    display: flex;
+}
+.expense-search{
+    width: 50%;
+    padding: 10px 20px;
+    border: 2px solid #0ce40c;
+    border-radius: 5px;
+    margin-top: 2rem;
+    margin-left: 1.2rem;
+}
+.searchExName{
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 5px 7px;
+}
+.searchExBtn{
+    background-color: green;
+    color: #fff;
+    font-size: 1rem;
+    padding: 5px 7px;
+    border-radius: 5px;
+    width: 20%;
+    cursor: pointer;
+}
+.saveExBtn{
+    background-color: green;
+    color: #fff;
+    font-size: 1rem;
+    padding: 5px 7px;
+    border-radius: 5px;
+    width: 20%;
+    cursor: pointer;
+}
+.clearExSearchBtn{
+    background-color: green;
+    color: #fff;
+    font-size: 1rem;
+    padding: 5px 7px;
+    border-radius: 5px;
+    width: 20%;
+    cursor: pointer;
+}
+.ebillDetails{
+    padding: 5px 7px;
+    font-size: 0.7rem;
+    margin-top: 0.7rem;
+    background-color: rgb(167, 9, 9);
+    border-radius: 5px;
+    display: none;
+}
+.fdBillDetails{
+    padding: 5px 7px;
+    font-size: 0.7rem;
+    margin-top: 0.7rem;
+    background-color: rgb(167, 9, 9);
+    border-radius: 5px;
+    display: none;
+}
+.hsBillDetails{
+    padding: 5px 7px;
+    font-size: 0.7rem;
+    margin-top: 0.7rem;
+    background-color: rgb(167, 9, 9);
+    border-radius: 5px;
+    display: none; 
+}
+.nofDays{
+    padding: 5px 7px;
+    font-size: 0.7rem;
+    margin-top: 0.7rem;
+    background-color: rgb(167, 9, 9);
+    border-radius: 5px;
+    display: none; 
+}
+.totalExbill{
+    padding: 5px 7px;
+    font-size: 0.7rem;
+    margin-top: 0.7rem;
+    background-color: rgb(167, 9, 156);
+    border-radius: 5px;
+    display: none; 
+}
+.billperDay{
+    padding: 5px 7px;
+    font-size: 0.7rem;
+    margin-top: 0.7rem;
+    background-color: rgb(167, 9, 156);
+    border-radius: 5px;
+    display: none; 
+}
+.expensesInputName{
+    margin-left: 42px;
+    font-size: 18px;
+    padding: 2px 3px;
+}
+.electricBill{
+    margin-left: 52px;
+    font-size: 18px; 
+    padding: 2px 3px;
+}
+.foodBill{
+    margin-left: 26px;
+    font-size: 18px;
+    padding: 2px 3px;
+}
+.houseBill{
+    font-size: 18px;
+    padding: 2px 3px;
+}
+.noOfMonth{
+    font-size: 18px;
+    padding: 2px 3px;
+}
+@media (max-width:960px) {
+    .first-Section{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        width: 70%;
+    }
+    .container-search{
+        width: 70%;
+    }
+    .second-section{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .expense-section{
+        width: 70%;
+    }
+    .expense-search{
+        width: 70%;
+    }
+}
+
+@media (max-width:600px){
+    .btnSave{
+        padding: 3px 6px;
+        font-size: 0.9rem;
+    }
+    .saveExBtn{
+        padding: 3px 5px;
+        font-size: 0.6rem;
+    }
+    .searchBtn{
+        padding: 3px 6px;
+        font-size: 0.9rem;
+    }
+    .clearSearchBtn{
+        padding: 3px 6px;
+        font-size: 0.9rem;
+    }
+    .fullName{
+        font-size: 15px;
+    }
+    .contactNo{
+        font-size: 15px;
+    }
+    .email{
+        font-size: 15px;
+    }
+    .searchName{
+        font-size: 15px;
+    }
+    .searchExBtn{
+        padding: 3px 6px;
+        font-size: 0.9rem;
+    }
+    .clearExSearchBtn{
+        padding: 3px 6px;
+        font-size: 0.9rem;
+    }
+    /* .expensesInputName{
+        font-size: 15px;
+    }
+    .electricBill{
+        font-size: 15px;
+    }
+    .foodBill{
+        font-size: 15px;
+        margin-left: 1px;
+    }
+    .houseBill{
+        font-size: 15px;
+    }
+    .noOfMonth{
+        font-size: 15px;
+    } */
+}
+
+@media(max-width:535px){
+    .expensesInputName{
+        margin-left: 1px;
+    }
+    .electricBill{
+        margin-left: 1px;
+    }
+    .foodBill{
+        margin-left: 1px;
+    }
+}
+
+@media (max-width:420px){
+    .searchBtn{
+        padding: 2px 5px;
+        font-size: 0.6rem;
+    }
+    .clearSearchBtn{
+        padding: 2px 5px;
+        font-size: 0.6rem;
+    }
+    .searchExBtn{
+        padding: 2px 5px;
+        font-size: 0.6rem;
+    }
+    .clearExSearchBtn{
+        padding: 2px 5px;
+        font-size: 0.6rem;
+    }
+    .expensesInputName{
+        margin-left: 1px;
+    }
+    .electricBill{
+        margin-left: 1px;
+    }
+    .foodBill{
+        margin-left: 1px;
+    }
+}
+
+/* @media(max-width:380px){
+    .expensesInputName{
+        font-size: 12px;
+    }
+    .electricBill{
+        font-size: 12px;
+    }
+    .foodBill{
+        font-size: 12px;
+        margin-left: 1px;
+    }
+    .houseBill{
+        font-size: 12px;
+    }
+    .noOfMonth{
+        font-size: 12px;
+    }
+} */
+@media(max-width:320px){
+    .expensesInputName{
+        font-size: 10px;
+    }
+    .electricBill{
+        font-size: 10px;
+    }
+    .foodBill{
+        font-size: 10px;
+        margin-left: 1px;
+    }
+    .houseBill{
+        font-size: 10px;
+    }
+    .noOfMonth{
+        font-size: 10px;
+    }
+}

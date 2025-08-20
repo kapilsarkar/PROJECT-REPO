@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./images/icon2.png" type="image/x-icon" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <h1 class="weather-header"><img src="./images/icon.png" class="weatherHead" alt="">Weather App</h1>
+    <div class="main-container">
+      <div class="weather-container">
+        <h3 class="city-header">Enter City Name:</h3>
+        <input id="searchCity" type="text" placeholder="City Name" />
+        <button class="searchBtn">Search</button>
+        <div class="weather-details">
+          <div class="weather-details-part1">
+            <p class="city-name"></p>
+            <p class="state-name">l</p>
+            <p class="country-name"></p>
+            <p class="zone-Name"></p>
+            <p class="localTime"></p>
+          </div>
+          <div class="weather-details-part2">
+            <p class="humidity"></p>
+            <p class="wind-speed"></p>
+            <p class="feels_like"></p>
+            <p class="rain"></p>
+          </div>
+          <div class="weather-details-part3">
+            <img
+              src="https://cdn.weatherapi.com/weather/64x64/day/113.png"
+              class="weather-icon"
+              alt="weather"
+            />
+            <p class="temperature">Temperature : 31 C</p>
+            <p class="weather-condn">Weather Condition : Mist</p>
+          </div>
+          <!-- <div class="weather-details-part4"></div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="three-dayForecast">
+      <div class="forecast-container3">
+        <h2 class="forecst-header">3 DAY FORECAST</h2>
+        <!-- day1- data starts-->
+        <div class="days">
+          <div class="day1">
+            <p class="day1-text">DAY-1</p>
+            <p class="day1-date"></p>
+          </div>
+          <div class="day1-sunrisesunset">
+            <p class="sunriseandsunset-text">Sunrise & Sunset</p>
+            <p class="day1-sunrise-value"></p>
+            <p class="day1-sunset-value"></p>
+          </div>
+          <div class="day1-condition">
+            <p class="day1-condition-text"></p>
+            <img class="day1-condition-img" src="" alt="img" />
+          </div>
+          <div class="day1-temperature">
+            <p class="day1-avgTemp-text">
+              Average <br />
+              Temp.
+            </p>
+            <p class="day1-avgtemp-value"></p>
+          </div>
+          <div class="day1-rain">
+            <p class="day1-rain-text">
+              Chances Of <br />
+              Rain in %
+            </p>
+            <p class="day1-rainValue"></p>
+          </div>
+        </div>
+         <!-- day1- data ends-->
+
+          <!-- day2- data starts-->
+          <div class="days2">
+            <div class="day2">
+              <p class="day2-text">DAY-2</p>
+              <p class="day2-date"></p>
+            </div>
+
+            <div class="day2-sunrisesunset">
+              <p class="sunriseandsunset-text">Sunrise & Sunset</p>
+              <p class="day2-sunrise-value"></p>
+              <p class="day2-sunset-value"></p>
+            </div>
+
+            <div class="day2-condition">
+              <p class="day2-condition-text"></p>
+              <img class="day2-condition-img" src="" alt="img" />
+            </div>
+            <div class="day2-temperature">
+              <p class="day2-avgTemp-text">
+                Average <br />
+                Temp.
+              </p>
+              <p class="day2-avgtemp-value"></p>
+            </div>
+            <div class="day2-rain">
+              <p class="day2-rain-text">
+                Chances Of <br />
+                Rain in %
+              </p>
+              <p class="day2-rainValue"></p>
+            </div>
+          </div>
+            <!-- day2- data ends-->
+       
+            <!-- day3- data starts-->
+            <div class="days3">
+              <div class="day3">
+                <p class="day3-text">DAY-3</p>
+                <p class="day3-date"></p>
+              </div>
+  
+              <div class="day3-sunrisesunset">
+                <p class="sunriseandsunset-text">Sunrise & Sunset</p>
+                <p class="day3-sunrise-value"></p>
+                <p class="day3-sunset-value"></p>
+              </div>
+  
+              <div class="day3-condition">
+                <p class="day3-condition-text"></p>
+                <img class="day3-condition-img" src="" alt="img" />
+              </div>
+              <div class="day3-temperature">
+                <p class="day3-avgTemp-text">
+                  Average <br />
+                  Temp.
+                </p>
+                <p class="day3-avgtemp-value"></p>
+              </div>
+              <div class="day3-rain">
+                <p class="day3-rain-text">
+                  Chances Of <br />
+                  Rain in %
+                </p>
+                <p class="day3-rainValue"></p>
+              </div>
+            </div>
+      </div>
+    </div>
+  </body>
+</html>

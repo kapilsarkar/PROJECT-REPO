@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.name {
+  text-align: center;
+  /* background-image: linear-gradient(rgb(212 212 212), rgb(255 255 15), #74fff2); */
+  padding: 2rem;
+  background: url("./images/TODOMAIN5.jpg");
+}
+.nameImg {
+  width: 10%;
+}
+.nameHead {
+  color: #fff;
+  font-weight: 900;
+  font-family: monospace;
+}
+.nameBtn {
+  padding: 0.5rem;
+  border: none;
+  font-weight: 900;
+  cursor: pointer;
+  background-color: #ffeb3b;
+  color: #673ab7;
+  border-radius: 5px;
+}
+.nameTxt {
+  padding: 1.2rem;
+  font-weight: 900;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.nameBox {
+  margin-block: 16px 30px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  color: #4f4f4f;
+}
+.heading {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: rgb(227 209 54);
+  color: rgb(36 29 238);
+}
+.all-task {
+  width: 100%;
+  display: flex;
+  padding-left: 1.2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.work-type {
+  width: 100%;
+  background-color: #ffeb3b;
+  color: #9c27b0;
+  font-weight: 900;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+.dateTime {
+  font-weight: 900;
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.work-type.open {
+  /* display: block; */
+  transform: scale(1);
+}
+
+.close-icon {
+  font-size: 48px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #01131b;
+  display: flex;
+  justify-content: flex-end;
+}
+.taskAddSection {
+  width: 48%;
+  border-radius: 5px;
+  padding: 2rem;
+  background-color: #ffffffa6;
+}
+.work-type-heading {
+  text-align: center;
+  padding: 1rem;
+  font-weight: 900;
+  color: #3b1305;
+  font-size: 1rem;
+}
+
+.taskAddHead {
+  font-weight: 900;
+  font-size: 20px;
+  color: #490846;
+}
+.taskAddImg {
+  width: 6%;
+}
+.taskAddInput {
+  margin-block: 16px 30px;
+  padding: 16px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  color: #4f4f4f;
+}
+.taskAddCategory {
+  font-weight: 900;
+  font-size: 20px;
+  color: #490846;
+}
+.categoryList {
+  display: flex;
+  gap: 15px;
+  padding-top: 5px;
+}
+.taskAddBtn {
+  background-color: #6b00ce;
+  color: #fff;
+  font-weight: 900;
+  padding-inline: 5rem;
+  border: none;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding-block: 1rem;
+  font-size: 12px;
+  cursor: pointer;
+}
+.showAllBtn{
+  background-color: #6b00ce;
+  color: #fff;
+  font-weight: 900;
+  padding-inline: 4rem;
+  border: none;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding-block: 1rem;
+  font-size: 12px;
+  cursor: pointer;
+}
+.taskShow {
+  width: 46%;
+  border-radius: 5px;
+  padding: 2rem;
+  background-color: #ffffffa6;
+}
+.newImgTask {
+  width: 95%;
+  border-radius: 1rem;
+  margin-top: 10px;
+}
+
+.taskList {
+  background-color: #fff;
+  padding: 16px 20px;
+  width: 100%;
+  border-radius: 10px;
+  max-height: 100px;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.allTaskList {
+  width: 70%;
+}
+
+.showCategory {
+  color: #01131b;
+}
+.showDate {
+  color: #0f7fed;
+}
+.taskResult{
+  color: rgb(3, 71, 15);
+  font-family: cursive;
+}
+/* .editDelDiv{
+  display: flex;
+  gap: 3px;
+} */
+.editTaskBtn {
+  border: none;
+  padding: 5px 10px;
+  background-color: #6b00ce;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-inline: 3px;
+}
+.deleteTaskBtn {
+  border: none;
+  padding: 5px 10px;
+  background-color: #6b00ce;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 7px;
+  cursor: pointer;
+}
+@media (max-width: 825px) {
+  .taskAddSection {
+    width: 100%;
+  }
+  .taskShow {
+    width: 100%;
+  }
+}
+
+@media (max-width: 410px) {
+  .taskAddHead {
+    font-size: 15px;
+  }
+  .taskAddCategory {
+    font-size: 15px;
+  }
+  .taskAddInput {
+    padding: 5px;
+    margin-block: 0px 0px;
+    font-size: 12px;
+  }
+  .taskAddBtn {
+    padding-inline: 2rem;
+    font-size: 10px;
+  }
+  .categoryList {
+    font-size: 10px;
+  }
+}

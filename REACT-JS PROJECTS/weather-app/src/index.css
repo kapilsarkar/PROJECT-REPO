@@ -1,0 +1,343 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.weather-head {
+  text-align: center;
+}
+.weather-heading {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  cursor: pointer;
+  flex-wrap: wrap;
+  background-color: #ffc107;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.main-container {
+  width: 100%;
+}
+
+.center-container {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(235, 201, 201, 0.2),
+    0 6px 20px 0 rgba(199, 182, 182, 0.19);
+  display: flex;
+  justify-content: center;
+  background-color: #ffc61a;
+  padding: 1.5rem;
+  gap: 1.2rem;
+}
+.left-container {
+  padding: 1.5rem;
+  width: 38%;
+  background-color: #ff2516;
+  box-shadow: 0 10px 12px 0 rgba(235, 201, 201, 0.2), 0 6px 20px 0 #72726c;
+  border-radius: 10px;
+  font-weight: 900;
+  color: #fff;
+  background: url("https://cdn.myportfolio.com/7221ba47-2336-4b3b-83f5-3a43bd71713c/a9b69e0a-f37b-4b38-b334-02bb48236aba_rw_1200.gif?h=07297cb0980037687d10222bcf9235af");
+}
+.input-box {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
+}
+.searchBtn {
+  cursor: pointer;
+  color: #673ab7;
+  background-color: #ffea2d;
+  border: none;
+  border-radius: 5px;
+  margin-left: 0.9rem;
+  padding: 15px 20px;
+  font-size: 12px;
+  font-weight: 900;
+}
+.search-container {
+  margin-top: 1.2rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.display-part1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.display-part2 {
+  color: #ffeb3b;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+.display-part1 img {
+  width: 38%;
+}
+.display-part1 h2 {
+  font-size: 38px;
+}
+.rain-status {
+  width: 15%;
+}
+.feels-like {
+  width: 15%;
+}
+.right-container {
+  padding: 1.5rem;
+  width: 60%;
+  background-color: #3f51b5;
+  box-shadow: 0 10px 12px 0 rgba(235, 201, 201, 0.2), 0 6px 20px 0 #72726c;
+  border-radius: 10px;
+  font-weight: 900;
+  color: #fff;
+  
+  background: url("https://i.pinimg.com/originals/0e/db/60/0edb6064ea5e7fc57bd7159e94aad20c.gif");
+}
+.other-weather-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+.humidity {
+  box-shadow: #141208 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 1.2rem;
+  border-radius: 10px;
+  color: #ffea2d;
+}
+.wind {
+  box-shadow: #141208 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 1.2rem;
+  border-radius: 10px;
+  color: #ffea2d;
+}
+.uv-index {
+  box-shadow: #141208 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 1.2rem;
+  border-radius: 10px;
+  color: #ffea2d;
+}
+.location-details {
+  box-shadow: #141208 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 1.2rem;
+  border-radius: 10px;
+  color: #ffea2d;
+}
+.right-container-menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  cursor: pointer;
+  flex-wrap: wrap;
+  background-color: #ffc107;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.location-head {
+  background-color: #ffc107;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.three-day-main-container {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(235, 201, 201, 0.2),
+    0 6px 20px 0 rgba(199, 182, 182, 0.19);
+
+  background-color: #ffc61a;
+  padding: 1.5rem;
+}
+.three-day-container {
+  padding: 1.5rem;
+  width: 90%;
+  background-color: #010415;
+  box-shadow: 0 10px 12px 0 rgba(235, 201, 201, 0.2), 0 6px 20px 0 #72726c;
+  border-radius: 10px;
+  font-weight: 900;
+  color: #fff;
+  margin-inline: auto; 
+}
+.three-day-heading {
+  background-color: #ffc107;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.three-day-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: #673ab7;
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+  background-image: url("https://cdn.dribbble.com/users/1364360/screenshots/3937236/weather_icons_dribbble.gif");
+}
+.day-one-date {
+  box-shadow: #141208 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 1.2rem;
+  border-radius: 10px;
+  color: #ffea2d;
+  text-align: center;
+}
+.day-one-sunrise {
+  box-shadow: #141208 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 1.2rem;
+  border-radius: 10px;
+  color: #ffea2d;
+  text-align: center;
+}
+.day-one-condition {
+  box-shadow: #141208 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 1.2rem;
+  border-radius: 10px;
+  color: #ffea2d;
+  text-align: center;
+}
+.day-one-condition img {
+  width: 50%;
+}
+.day-one-avgTemp {
+  box-shadow: #141208 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 1.2rem;
+  border-radius: 10px;
+  color: #ffea2d;
+  text-align: center;
+}
+.day-one-chanceOfRain {
+  box-shadow: #141208 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 1.2rem;
+  border-radius: 10px;
+  color: #ffea2d;
+  text-align: center;
+}
+.all-three {
+  margin-top: 0.5rem;
+}
+.hourly-container {
+  padding: 1.5rem;
+  background-color: #ffc107;
+  box-shadow: 0 10px 12px 0 rgba(235, 201, 201, 0.2), 0 6px 20px 0 #72726c;
+  border-radius: 10px;
+  font-weight: 900;
+  color: #fff;
+  margin-inline: auto;
+}
+.hour-one {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  overflow: auto;
+}
+.hour-one-container {
+  background-color: #673ab7;
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background: url("https://webartdevelopers.com/blog/wp-content/uploads/2019/01/css-animated-weather-icons.gif");
+}
+.hour-one-container h3 {
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: 900;
+}
+.each-day {
+  box-shadow: #141208 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 1.5rem;
+  font-weight: 900;
+}
+.hourly-head {
+  background-color: #140218;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.weather-meu-list{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-weight: 900;
+  cursor: pointer;
+}
+@media (max-width: 790px) {
+  .center-container {
+    flex-direction: column;
+  }
+
+  .left-container {
+    width: 100%;
+    padding: 0.3rem;
+  }
+
+  .right-container {
+    width: 100%;
+    padding: 0.3rem;
+  }
+}
+
+@media (max-width: 310px) {
+  .search-container {
+    padding: 0px;
+  }
+  .input-box {
+    padding: 5px 10px;
+  }
+  .three-day-container {
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,95 @@
+body{
+    background-color:rgba(0, 0, 0, 0.922);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.head{
+    text-align: center;
+}
+
+.container{
+    width: 65%;
+    margin-inline: auto;
+    /* padding-left: 25rem; */
+    
+}
+
+.input{
+    width: 25rem;
+    height: 2.5rem;
+    margin-left: 5.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left: 1rem;
+    
+}
+.TaskList{
+    width: 60%;
+    background-color: rgb(3, 52, 3);
+    border-radius: 1rem;
+    padding: 2rem;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.containerTask{
+    margin-top: 2rem;
+    margin-inline: auto;
+    width: 95%;
+}
+.btnAdd{
+    background-color: rgb(5, 77, 5);
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+}
+.DeleteBtn{
+    background-color: rgb(220 18 65);
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem; 
+    border: none;
+    border-radius: 0.5rem;
+    
+}
+.EditBtn{
+    background-color: rgb(220 18 65);
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem; 
+    border: none;
+    border-radius: 0.5rem;
+}
+.UpdateBtn{
+    background-color: rgb(220 18 65);
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem; 
+    border: none;
+    border-radius: 0.5rem;
+}
+
+@media(max-width:1010px){
+    .input{
+        width: 15rem;
+    }
+    .container{
+        width: 100%;
+    }
+}
+
+@media(max-width:510px){
+    .input{
+        width: 10rem;
+        font-size: 0.5rem;
+        margin-left: 2rem;
+    }
+}
+
+@media(max-width:380px){
+    .input{
+        width: 5rem;
+    }
+}

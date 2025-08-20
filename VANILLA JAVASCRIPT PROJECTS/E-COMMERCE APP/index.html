@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/logotech.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css"
+      integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="./script.js" defer></script>
+
+    <script src="./slider.js" defer></script>
+    <title>E-Commerce</title>
+  </head>
+  <body>
+    <!-- Header Section Starts -->
+    <header class="header">
+      <main>
+        <img src="./images/logotech.png" class="logo" alt="logo" />
+        <h2 class="mainHead">TECH STORE</h2>
+        <div class="menu-container">
+          <nav class="nav-menu">
+            <span class="close-icon">&times;</span>
+            <a href="#">Home</a>
+            <a href="#mobile-section">Mobiles</a>
+            <a href="#laptop-section">Laptops</a>
+          </nav>
+        </div>
+
+        <i
+          class="fa-solid fa-circle-half-stroke"
+          id="dark-mode"
+          style="color: #fff"
+        ></i>
+
+        <i class="fa-solid fa-cart-shopping" id="cart" style="color: #fff"
+          ><span class="cartNumber"></span
+        ></i>
+
+        <div class="humburger-menu">
+          <span class="humburger-icon">&#9776;</span>
+        </div>
+      </main>
+    </header>
+    <!-- Header Section Ends -->
+
+    <!-- Slider Section Starts -->
+    <section class="slider">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/banner1.webp" alt="banner-1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/banner2.webp" alt="banner-2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/banner3.webp" alt="banner-3" />
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Mobile Section Starts -->
+
+    <section class="mobile" id="mobile-section">
+      <h2 class="mobile-head">MOBILES</h2>
+      <div class="mobile-list">
+        <div class="first-mobile">
+          <p class="mobile-1-text">APPLE iPhone 14 (Starlight, 128 GB)</p>
+          <img
+            src="./images/mobile-1.webp"
+            class="mobile-1-img"
+            alt="mobile1"
+          />
+          <p class="mobile-1-price">₹64,999</p>
+          <button class="mobile-1-btn">Add To Cart</button>
+        </div>
+        <div class="first-mobile">
+          <p class="mobile-1-text">APPLE iPhone 14 Plus (Blue, 128 GB)</p>
+          <img
+            src="./images/mobile-2.webp"
+            class="mobile-1-img"
+            alt="mobile1"
+          />
+          <p class="mobile-1-price">₹73,999</p>
+          <button class="mobile-2-btn">Add To Cart</button>
+        </div>
+        <div class="first-mobile">
+          <p class="mobile-1-text">APPLE iPhone 13 (Midnight, 128 GB)</p>
+          <img
+            src="./images/mobile-3.webp"
+            class="mobile-1-img"
+            alt="mobile1"
+          />
+          <p class="mobile-1-price">₹52,499</p>
+          <button class="mobile-3-btn">Add To Cart</button>
+        </div>
+      </div>
+      <div class="clear-btn">
+        <button class="mobile-clear">Clear Cart</button>
+      </div>
+    </section>
+    <!-- Mobile Section Ends -->
+
+    <!-- Laptop Section Starts -->
+    <section class="laptop" id="laptop-section">
+      <h2 class="laptop-head">LAPTOPS</h2>
+      <div class="laptop-list">
+        <div class="first-laptop">
+          <img
+          src="./images/laptop-1.webp"
+          class="laptop-1-img"
+          alt="mobile1"
+        />
+          <p class="laptop-1-text">HP 2023 Ryzen 3 Dual Core 3250U </p>
+          <p class="laptop-1-price">₹32,990</p>
+          <button class="laptop-1-btn">Add To Cart</button>
+        </div>
+        <div class="first-laptop">
+          <img
+          src="./images/laptop-2.webp"
+          class="laptop-1-img"
+          alt="mobile1"
+        />
+          <p class="laptop-1-text">APPLE 2020 Macbook Air M1  </p>
+          <p class="laptop-1-price">₹79,990</p>
+          <button class="laptop-2-btn">Add To Cart</button>
+        </div>
+        <div class="first-laptop">
+          <img
+          src="./images/laptop-3.webp"
+          class="laptop-1-img"
+          alt="mobile1"
+        />
+          <p class="laptop-1-text">HP Intel Core i3 12th Gen 1215U   </p>
+          <p class="laptop-1-price">₹41,990</p>
+          <button class="laptop-3-btn">Add To Cart</button>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+          <h1 class="footer-head">Made By Kapil Sarkar</h1>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,382 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+.slider {
+  margin-top: 1px;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo {
+  width: 6%;
+  background-color: #d4b708;
+  padding: 5px;
+  border-radius: 15px;
+}
+body.dark {
+  background-color: #232323;
+  color: #fff;
+}
+
+.header {
+  background-color: rgb(16 126 5);
+  color: #fff;
+  padding: 10px 15px;
+ 
+}
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.mainHead {
+  font-size: 36px;
+
+  background-image: linear-gradient(
+    -225deg,
+    #d510cf 0%,
+    #fff 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+}
+#cart {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#dark-mode {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.humburger-menu {
+  display: none;
+  cursor: pointer;
+}
+.close-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobile {
+  width: 100%;
+  margin-top: 1px;
+}
+
+.mobile-head {
+  background-color: rgb(16 126 5);
+  color: #fff;
+  padding: 10px 10px;
+  font-size: 20px;
+  text-align: center;
+}
+.laptop-head{
+  background-color: rgb(16 126 5);
+  color: #fff;
+  padding: 10px 10px;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+.mobile-list {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+.laptop-list{
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.first-mobile {
+  width: 46%;
+  padding: 1rem;
+}
+.first-laptop{
+  width: 46%;
+  padding: 1rem;
+}
+.mobile-1-img {
+  width: 35%;
+  margin-inline: auto;
+  border-radius: 20px;
+}
+.laptop-1-img{
+  width: 35%;
+  margin-inline: auto;
+  border-radius: 20px;
+}
+.mobile-1-text {
+  font-weight: 700;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.laptop-1-text{
+  font-weight: 700;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.mobile-1-price {
+  margin-top: 1rem;
+  padding: 3px 7px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.laptop-1-price{
+  margin-top: 1rem;
+  padding: 3px 7px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.mobile-1-btn {
+  background-color: #2aa611;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+.mobile-2-btn {
+  background-color: #2aa611;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+.mobile-3-btn {
+  background-color: #2aa611;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+.laptop-1-btn {
+  background-color: #2aa611;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+.laptop-2-btn {
+  background-color: #2aa611;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+.laptop-3-btn {
+  background-color: #2aa611;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+.cartNumber {
+  font-size: 1rem;
+}
+.clear-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 5px;
+  position: sticky;
+}
+.mobile-clear {
+  padding: 50px 5px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e00e3b;
+  color: #fff;
+  cursor: pointer;
+}
+.footer{
+  width: 100%;
+  margin-top: 3rem;
+}
+.footer-head{
+  background-color: #2aa611;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 3rem;
+  padding: 3rem;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .menu-container {
+    display: none;
+  }
+  .nav-menu {
+    flex-direction: column;
+    background-color: rgb(218 160 38);
+    padding: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
+    z-index: 20;
+  }
+  main {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .close-icon {
+    display: block;
+  }
+ 
+  .humburger-menu {
+    display: block;
+    position: absolute;
+    right: 10px;
+    font-size: 1.5rem;
+  }
+  .mobile-list {
+    flex-direction: column;
+  }
+  .laptop-list{
+    flex-direction: column;
+  }
+  .mobile-1-text {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .laptop-1-text{
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .mobile-1-price {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .laptop-1-price{
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .mobile-1-btn {
+    padding: 3px 6px;
+    font-size: 1rem;
+  }
+  .mobile-2-btn {
+    padding: 3px 6px;
+    font-size: 1rem;
+  }
+  .mobile-3-btn {
+    padding: 3px 6px;
+    font-size: 1rem;
+  }
+  .laptop-1-btn{
+    padding: 3px 6px;
+    font-size: 1rem;
+  }
+  .laptop-2-btn{
+    padding: 3px 6px;
+    font-size: 1rem;
+  }
+  .laptop-3-btn{
+    padding: 3px 6px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 542px) {
+  .mainHead {
+    font-size: 20px;
+  }
+  #dark-mode {
+    font-size: 0.8rem;
+  }
+
+  #cart {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .mainHead {
+    font-size: 12px;
+  }
+  #dark-mode {
+    font-size: 0.8rem;
+  }
+
+  #cart {
+    font-size: 0.8rem;
+  }
+  .nav-menu {
+    padding: 14px;
+  }
+  .first-mobile {
+    width: 50%;
+  }
+  .first-laptop{
+    width: 50%;
+  }
+}

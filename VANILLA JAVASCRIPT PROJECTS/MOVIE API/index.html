@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Api</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./IMAGES/icon.png" type="image/x-icon" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css"
+    integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+   
+    <h1 class="movieHead"><i class="fa-solid fa-film" style="color: #c51b0b;"></i>Movie Api Project<i class="fa-solid fa-film" style="color: #c51b0b;"></i></h1>
+    <h1 class="topMovieHead"><i class="fa-solid fa-video" style="color: #FFD43B;"></i>TOP-MOVIES<i class="fa-solid fa-video" style="color: #FFD43B;"></i></h1>
+    <section class="top-Movies">
+       
+        <div class="topMovieList">
+          <img src="https://m.media-amazon.com/images/M/MV5BMjIwMjE1Nzc4NV5BMl5BanBnXkFtZTgwNDg4OTA1NzM@._V1_SX300.jpg" class="topMovie1" alt="movie-1">
+          <p class="topMovieTitle">The Lion King</p>
+          <p class="topMovieYear">2019</p>
+          <p class="topMovieRunTime">118 min</p>
+        </div>
+        <div class="topMovieList">
+          <img src="https://m.media-amazon.com/images/M/MV5BMjMzODc2NzU5MV5BMl5BanBnXkFtZTgwNTMwMTE3NjM@._V1_SX300.jpg" class="topMovie1" alt="movie-1">
+          <p class="topMovieTitle">Mowgli</p>
+          <p class="topMovieYear">2018</p>
+          <p class="topMovieRunTime">104 min</p>
+        </div>
+        <div class="topMovieList">
+          <img src="https://m.media-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_SX300.jpg" class="topMovie1" alt="movie-1">
+          <p class="topMovieTitle">Doctor Strange</p>
+          <p class="topMovieYear">2016</p>
+          <p class="topMovieRunTime">115 min</p>
+        </div>
+        <div class="topMovieList">
+          <img src="https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_SX300.jpg" class="topMovie1" alt="movie-1">
+          <p class="topMovieTitle">John Wick</p>
+          <p class="topMovieYear">2014</p>
+          <p class="topMovieRunTime">101 min</p>
+        </div>
+    
+    </section>
+    <section class="movieContainer">
+      
+      <div class="movieContainerInput">
+        <input
+          type="text"
+          id="movieSearch"
+          placeholder="Enter Move Name" value=""
+        />
+        <button class="BtnSearch">Search</button>
+      </div>
+      <h2 class="movieTitle"></h2>
+      <div class="movieDetails">
+        
+      </div>
+    </section>
+  </body>
+</html>
