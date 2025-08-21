@@ -57,7 +57,7 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute w-full px-5 sm:px-8 py-3 bg-gradient-to-b from-black/80 via-black/60 to-transparent z-10 flex justify-between items-center backdrop-blur-md">
+    <div className="absolute w-full  px-5 sm:px-8 py-5 bg-gradient-to-b from-black/80 via-black/60 to-transparent z-10 flex justify-between items-center">
       {/* Logo */}
       <img
         className="w-24 sm:w-32 md:w-40 lg:w-44 cursor-pointer"
