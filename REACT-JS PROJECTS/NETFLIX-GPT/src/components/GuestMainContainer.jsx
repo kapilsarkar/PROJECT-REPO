@@ -7,7 +7,7 @@ const GuestMainContainer = () => {
 
   if (!tv || tv.length === 0) return null;
 
-  const mainTv = tv[0] || {};
+  const mainTv = tv[1] || {};
   //console.log("Main TV:", mainTv); // Debugging log
 
   const { original_name = "No Title", overview = "", id } = mainTv;

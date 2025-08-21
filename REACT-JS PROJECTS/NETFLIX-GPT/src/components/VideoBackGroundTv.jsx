@@ -3,8 +3,9 @@ import useTvTrailer from "../hooks/useTvTrailer";
 
 const VideoBackGroundTv = ({ tvId }) => {
   const trailerVideo = useSelector((store) => store.tv?.trailerVideo);
-
+  console.log("Trailer Video from Redux:", trailerVideo);
   useTvTrailer(tvId);
+  console.log("Fetching trailer for tvId:", tvId);
 
   //console.log("Trailer Video:", trailerVideo);
 
