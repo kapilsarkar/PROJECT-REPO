@@ -7,20 +7,17 @@ const GuestMainContainer = () => {
 
   if (!tv || tv.length === 0) return null;
 
+  // pick the first valid TV show that has an ID
   const mainTv = tv.find(show => show?.id) || {};
-
-  //const mainTv = tv[0] || tv[1] || {};
-  //console.log("Main TV:", mainTv); // Debugging log
-
   const { original_name = "No Title", overview = "", id } = mainTv;
 
   if (!id) {
-    //console.warn("No TV ID found for main TV show");
+    console.warn("No valid TV ID found in popularTvShows:", tv);
     return null;
   }
 
   return (
-    <div className="w-full   relative">
+    <div className="w-full relative">
       <VideoBackGroundTv tvId={id} />
       <TvVideoTitle name={original_name} overview={overview} />
     </div>

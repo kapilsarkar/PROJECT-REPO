@@ -6,30 +6,32 @@ import { addTrailerVideo } from "../utils/tvSlice";
 
 const useTvTrailer = (tvId) => {
   const dispatch = useDispatch();
- 
+
   const getTvVideos = async () => {
     try {
+      dispatch(addTrailerVideo(null)); // reset before fetching
       const data = await fetch(
         `https://api.themoviedb.org/3/tv/119051/videos?language=en-US`,
         API_OPTIONS
       );
       const json = await data.json();
-      //console.log(json?.results);
+      console.log("Videos for TV ID:", tvId, json?.results);
 
-      const filterData = json.results.filter((video) => video?.type === "Trailer");
-      const trailer = filterData.length ? filterData[0] : json.results[0];
+      const filterData = json?.results?.filter((video) => video?.type === "Trailer");
+      const trailer = filterData?.length ? filterData[0] : json?.results?.[0];
 
-      //console.log(trailer);
-      dispatch(addTrailerVideo(trailer));
+      if (trailer) {
+        dispatch(addTrailerVideo(trailer));
+      } else {
+        console.warn("No trailer found for this TV ID:", tvId);
+      }
     } catch (error) {
       console.error("Error fetching TV videos:", error);
     }
   };
 
   useEffect(() => {
-    if (tvId) {
-      getTvVideos();
-    }
+    if (tvId) getTvVideos();
   }, [tvId]);
 };
 
