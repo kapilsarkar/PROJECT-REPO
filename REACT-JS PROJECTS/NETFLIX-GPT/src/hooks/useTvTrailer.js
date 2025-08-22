@@ -15,7 +15,7 @@ const useTvTrailer = (tvId) => {
         API_OPTIONS
       );
       const json = await data.json();
-      console.log("Videos for TV ID:", tvId, json?.results);
+      //console.log("Videos for TV ID:", tvId, json?.results);
 
       const filterData = json?.results?.filter((video) => video?.type === "Trailer");
       const trailer = filterData?.length ? filterData[0] : json?.results?.[0];

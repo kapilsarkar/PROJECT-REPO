@@ -1,17 +1,17 @@
 import { FaPlay } from "react-icons/fa";
 
-const TvVideoTitle = ({ name, overview }) => {
+const TvVideoTitle = () => {
   return (
     <div className="absolute inset-0 flex flex-col justify-center px-4 sm:px-8 lg:px-16 xl:px-24 bg-gradient-to-r from-black/90 via-black/60 to-transparent text-white z-10">
       
       {/* Title */}
       <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold drop-shadow-lg leading-tight max-w-3xl">
-        {name}
+        Wednesday Official Blooper Reel | Netflix,
       </h2>
 
       {/* Overview */}
       <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg max-w-full sm:max-w-2xl lg:max-w-xl text-gray-200 leading-relaxed line-clamp-3 md:line-clamp-none bg-black/30 sm:bg-transparent rounded-md sm:rounded-none p-2 sm:p-0">
-        {overview}
+        "Wednesday" can refer to the day of the week, known as "hump day" in North America, or the Netflix series Wednesday, which follows Wednesday Addams as she attends a magical boarding school called Nevermore Academy to solve a monstrous mystery
       </p>
 
       {/* Buttons */}
