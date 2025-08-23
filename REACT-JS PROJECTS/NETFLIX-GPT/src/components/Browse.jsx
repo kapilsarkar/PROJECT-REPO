@@ -3,7 +3,6 @@ import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import usePopularMovies from "../hooks/usePopularMovies";
 import useTopRated from "../hooks/useTopRated";
 import useUpcomingMovies from "../hooks/useUpcomingMovies";
-
 import Header from "./Header";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
@@ -20,7 +19,7 @@ const Browse = () => {
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
       <Header className="sticky top-0 bg-black/60 backdrop-blur-lg z-50" />
       {showGPTSearch ? (
-        <GPTSearchPage/>
+        <GPTSearchPage />
       ) : (
         <>
           <main className="space-y-48">
@@ -31,7 +30,7 @@ const Browse = () => {
               <SecondaryContainer />
             </section>
           </main>
-          <Footer/>
+          <Footer />
         </>
       )}
     </div>
