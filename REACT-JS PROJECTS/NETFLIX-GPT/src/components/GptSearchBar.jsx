@@ -37,7 +37,7 @@ const GptSearchBar = () => {
     setLoading(true);
     try {
       const response = await askGemini(gptQuery);
-      console.log("Gemini Response:", response);
+      //console.log("Gemini Response:", response);
 
       // Convert Gemini response string into an array of movie names
       const movieNames = response.split(",").map((m) => m.trim());
@@ -46,7 +46,7 @@ const GptSearchBar = () => {
       // Fetch TMDB details
       const promiseArray = movieNames.map((movie) => searchMovieTMDB(movie));
       const TMDBResults = await Promise.all(promiseArray);
-      console.log(TMDBResults);
+      //console.log(TMDBResults);
       dispatch(
         addGptMovieResult({
           gptMovieNames: movieNames,
