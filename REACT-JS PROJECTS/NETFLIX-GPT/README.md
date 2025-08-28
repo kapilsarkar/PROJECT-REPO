@@ -2,7 +2,7 @@
 > AI-Powered Movie Recommendation Web App (Gemini AI + TMDB)
 
 <p align="center">
-  <img src="./IMG/banner.png" alt="Netflix GPT Banner" width="800"/>
+  <img src="./IMG/Banner.png" alt="Netflix GPT Banner" width="800"/>
 </p>
 
 <p align="center">
@@ -17,14 +17,13 @@
 ---
 
 ## 📑 Table of Contents
-- [Overview](#-netflix-gpt)
+- [Overview](#-overview)
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Live Demo](#-live-demo)
 - [Screenshots](#-screenshots)
 - [Getting Started](#-getting-started)
-- [Contributing](#-contributing)
-- [License](#-license)
+
 
 ---
 
@@ -41,7 +40,7 @@ It also features a **guest mode** for quick demo access, multilingual support, a
 - 👥 **Guest Mode** for demo access without signing in  
 - 🤖 **AI-Powered Recommendations** using Gemini AI  
 - 📱 **Responsive, Mobile-First Design**  
-- ⚡ **Seamless Navigation** with React Router DOM
+- ⚡ **Seamless Navigation** with React Router DOM  
 
 ---
 
@@ -101,7 +100,31 @@ Follow these steps to run Netflix GPT locally:
    ```bash
    git clone https://github.com/yourusername/netflix-gpt.git
    cd netflix-gpt
+2. Install dependencies:
 
- 2.   Install dependencies:
-
+```
 npm install
+```
+
+3. Create a .env file in the root directory:
+
+```
+VITE_GEMINI_API_KEY=your_gemini_api_key_here
+VITE_TMDB_API_KEY=your_tmdb_api_key_here
+```
+
+4. Start the development server:
+
+```
+npm run dev
+
+```
+
+5. Open in your browser:
+
+```
+http://localhost:5173
+
+```
+
+<p align="center">Made with ❤️ by Kapil Sarkar</p> ```
