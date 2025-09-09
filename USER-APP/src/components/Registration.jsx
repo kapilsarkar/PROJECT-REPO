@@ -1,4 +1,15 @@
+import { useFormik } from "formik";
+
 const Registration = () => {
+ 
+  useFormik({
+    initialValues:initialValues,
+    onSubmit : (values)=>{
+     
+      l
+    } 
+  })
+
   return (
     <div className="w-96 px-3 shadow-xl  border-2 mt-2">
       <h2 className=" text-center p-2 mt-3">Registration</h2>
