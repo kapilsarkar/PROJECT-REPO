@@ -3,7 +3,7 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-200 to-yellow-500">
       <div className="bg-white/90 backdrop-blur-md shadow-xl rounded-2xl p-8 sm:p-10 w-11/12 sm:w-2/3 md:w-1/3 lg:w-1/4">
         <h2 className="text-2xl font-bold text-center text-yellow-700 mb-6">
-          Welcome Back
+         Sign In
         </h2>
         <form className="flex flex-col gap-4">
           <input
