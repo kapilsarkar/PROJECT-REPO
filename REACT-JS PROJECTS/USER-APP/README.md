@@ -1,12 +1,13 @@
-# React + Vite
+### USER-MANAGEMENT APP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Sign-In /Sign Up Logic.
+- Data Handling using Formic.
+- Yup for Data Validation.
+- Sign-In/Sign-Up Logic Authentication Logic using FireBase.
+- After Sign In Personal details are shown.
+- Other Personal Details are being Uploaded example Image-Upload and other stuff.
+- Personal Details can be Downloaded with PDF.
+- Sign-Out Logic is also to be Implemented.
+- Sign-In with Google option is also there.
+- Also Form Details can be Edit or Update.
+- Other Details are also to be implemented in Future to make it more complex project.
