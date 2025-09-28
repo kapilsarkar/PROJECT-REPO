@@ -1,32 +1,92 @@
 import { useState } from "react";
 import { useFormik } from "formik";
-import { signUpSchema } from "../schemas";
+import * as Yup from "yup";
 import GoogleSignInButton from "./GoggleSignInButton";
+import { auth} from "../utils/firebase"; 
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { db } from "../utils/firebase"; 
+import { doc, setDoc } from "firebase/firestore";
+
+
+// ✅ Separate schemas
+const signInSchema = Yup.object({
+  email: Yup.string().email("Invalid email").required("Email is required"),
+  password: Yup.string().required("Password is required"),
+});
+
+const signUpSchema = Yup.object({
+  FullName: Yup.string().required("Full name is required"),
+  mobile: Yup.string().required("Mobile is required"),
+  username: Yup.string().required("Username is required"),
+  email: Yup.string().email("Invalid email").required("Email is required"),
+  password: Yup.string().min(6, "Min 6 characters").required("Password is required"),
+  confirm_password: Yup.string()
+    .oneOf([Yup.ref("password"), null], "Passwords must match")
+    .required("Confirm your password"),
+});
 
 const Login = () => {
-  const [isSignInForm, setSignInForm] = useState(true);
+  const [isSignInForm, setIsSignInForm] = useState(true);
+
+  const formik = useFormik({
+    initialValues: {
+      FullName: "",
+      mobile: "",
+      username: "",
+      email: "",
+      password: "",
+      confirm_password: "",
+    },
+    validationSchema: isSignInForm ? signInSchema : signUpSchema,
+    onSubmit: async (vals) => {
+      try {
+        if (isSignInForm) {
+          // ✅ Sign In
+          const userCredential = await signInWithEmailAndPassword(
+            auth,
+            vals.email,
+            vals.password
+          );
+          console.log("Signed in:", userCredential.user);
+          alert("Sign In Successful");
+        } else {
+          // ✅ Sign Up
+          const userCredential = await createUserWithEmailAndPassword(
+            auth,
+            vals.email,
+            vals.password
+          );
+          const user = userCredential.user;
+
+          // ✅ Save extra details in Firestore
+          await setDoc(doc(db, "users", user.uid), {
+            FullName: vals.FullName,
+            mobile: vals.mobile,
+            username: vals.username,
+            email: vals.email,
+            createdAt: new Date(),
+          });
+
+          console.log("User created & saved:", user.uid);
+          alert("Sign Up Successful & Data Saved");
+        }
+      } catch (error) {
+        console.error("Auth Error:", error.message);
+        alert(error.message);
+      }
+    },
+  });
+
+  // ✅ put toggle AFTER formik, use resetForm from destructure
+  const { values, errors, touched, handleChange, handleBlur, handleSubmit, resetForm } = formik;
 
   const toggleSignInForm = () => {
-    setSignInForm(!isSignInForm);
+    setIsSignInForm(!isSignInForm);
+    resetForm();
   };
-
-  // ✅ Use Formik's handleSubmit directly
-  const { values, errors, touched, handleChange, handleBlur, handleSubmit } =
-    useFormik({
-      initialValues: {
-        FullName: "",
-        mobile: "",
-        username: "",
-        email: "",
-        password: "",
-        confirm_password: "",
-      },
-      validationSchema: signUpSchema,
-      onSubmit: (vals) => {
-        console.log("Form Data", vals);
-        alert(isSignInForm ? "Sign In Successful" : "Sign Up Successful");
-      },
-    });
 
   return (
     <div className="bg-white/90 mx-auto backdrop-blur-md shadow-xl rounded-2xl p-6 sm:p-10 w-full max-w-md">
@@ -35,7 +95,7 @@ const Login = () => {
       </h2>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        {/* Full Name */}
+        {/* Full Name & Mobile only in Sign Up */}
         {!isSignInForm && (
           <>
             <div>
@@ -75,47 +135,50 @@ const Login = () => {
                 <p className="text-red-500 text-sm mt-1">{errors.mobile}</p>
               )}
             </div>
-
-            <div>
-              <input
-                type="email"
-                name="email"
-                placeholder="E-Mail"
-                value={values.email}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                className={`p-3 rounded-md border focus:outline-none focus:ring-2 w-full ${
-                  errors.email && touched.email
-                    ? "border-red-500 focus:ring-red-400"
-                    : "border-gray-300 focus:ring-yellow-400"
-                }`}
-              />
-              {errors.email && touched.email && (
-                <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-              )}
-            </div>
           </>
         )}
 
-        {/* Username */}
+        {/* Email */}
         <div>
           <input
-            type="text"
-            name="username"
-            placeholder="Username"
-            value={values.username}
+            type="email"
+            name="email"
+            placeholder="E-Mail"
+            value={values.email}
             onChange={handleChange}
             onBlur={handleBlur}
             className={`p-3 rounded-md border focus:outline-none focus:ring-2 w-full ${
-              errors.username && touched.username
+              errors.email && touched.email
                 ? "border-red-500 focus:ring-red-400"
                 : "border-gray-300 focus:ring-yellow-400"
             }`}
           />
-          {errors.username && touched.username && (
-            <p className="text-red-500 text-sm mt-1">{errors.username}</p>
+          {errors.email && touched.email && (
+            <p className="text-red-500 text-sm mt-1">{errors.email}</p>
           )}
         </div>
+
+        {/* Username only in Sign Up */}
+        {!isSignInForm && (
+          <div>
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              value={values.username}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={`p-3 rounded-md border focus:outline-none focus:ring-2 w-full ${
+                errors.username && touched.username
+                  ? "border-red-500 focus:ring-red-400"
+                  : "border-gray-300 focus:ring-yellow-400"
+              }`}
+            />
+            {errors.username && touched.username && (
+              <p className="text-red-500 text-sm mt-1">{errors.username}</p>
+            )}
+          </div>
+        )}
 
         {/* Password */}
         <div>
@@ -137,7 +200,7 @@ const Login = () => {
           )}
         </div>
 
-        {/* Confirm Password */}
+        {/* Confirm Password only in Sign Up */}
         {!isSignInForm && (
           <div>
             <input
@@ -169,6 +232,7 @@ const Login = () => {
         </button>
       </form>
 
+      {/* Toggle Sign In/Sign Up */}
       <div className="text-center mt-4">
         <p className="text-sm text-gray-700">
           {isSignInForm ? "Don’t have an account?" : "Already a Member?"}
@@ -180,11 +244,16 @@ const Login = () => {
           </span>
         </p>
       </div>
-      <GoogleSignInButton
-        onClick={() => console.log("Google Sign In Clicked")}
-      />
+
+      {/* Google Sign In */}
+      {isSignInForm && (
+        <GoogleSignInButton
+          onClick={() => console.log("Google Sign In Clicked")}
+        />
+      )}
     </div>
   );
 };
 
 export default Login;
+
