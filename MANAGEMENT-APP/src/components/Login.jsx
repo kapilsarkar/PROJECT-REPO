@@ -1,4 +1,5 @@
 import { useState } from "react";
+import GoogleSignInButton from "./GoogleSignInButton";
 
 const Login = () => {
   const [isSignInForm, setIsSignForm] = useState(true);
@@ -8,7 +9,6 @@ const Login = () => {
   };
   return (
     <>
-    
       <div className="bg-white/90 mx-auto backdrop-blur-md shadow-xl rounded-2xl p-6 sm:p-10 w-full max-w-md">
         <h2 className="text-center text-xl font-bold p-2">
           {isSignInForm ? "Log In" : "Sign Up"}
@@ -85,6 +85,11 @@ const Login = () => {
             </span>
           </p>
         </div>
+        {isSignInForm && (
+          <GoogleSignInButton
+            onClick={() => console.log("Google Sign In Clicked")}
+          />
+        )}
       </div>
     </>
   );
