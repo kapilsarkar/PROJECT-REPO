@@ -1,7 +1,12 @@
 import { useState } from "react";
-import GoogleSignInButton from "./GoogleSignInButton";
 import { useFormik } from "formik";
+import GoogleSignInButton from "./GoogleSignInButton";
 import { SignUpSchema } from "../utils";
+import { auth } from "../firebase";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 const initialValues = {
   name: "",
@@ -13,20 +18,40 @@ const initialValues = {
 };
 
 const Login = () => {
+  const [isSignInForm, setIsSignInForm] = useState(true);
+
+  const toggleSignInForm = () => setIsSignInForm(!isSignInForm);
+
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues,
       validationSchema: SignUpSchema,
-      onSubmit: (values) => {
-        console.log("Form Submitted", values);
+      onSubmit: async (values) => {
+        const { email, password } = values;
+        try {
+          if (isSignInForm) {
+            const userCredential = await signInWithEmailAndPassword(
+              auth,
+              email,
+              password
+            );
+            console.log("User logged in:", userCredential.user);
+            alert("Login Successful!");
+          } else {
+            const userCredential = await createUserWithEmailAndPassword(
+              auth,
+              email,
+              password
+            );
+            console.log("User signed up:", userCredential.user);
+            alert("Sign Up Successful!");
+          }
+        } catch (error) {
+          console.error(error);
+          alert(error.message);
+        }
       },
     });
-
-  const [isSignInForm, setIsSignInForm] = useState(true);
-
-  const toggleSignInForm = () => {
-    setIsSignInForm(!isSignInForm);
-  };
 
   return (
     <>
