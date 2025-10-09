@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useFormik } from "formik";
 import GoogleSignInButton from "./GoogleSignInButton";
 import { SignUpSchema } from "../utils";
-import { auth } from "../firebase";
+import { auth } from "../utils/firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -47,7 +47,7 @@ const Login = () => {
             alert("Sign Up Successful!");
           }
         } catch (error) {
-          console.error(error);
+          //console.error(error);
           alert(error.message);
         }
       },
