@@ -1,4 +1,21 @@
+import { useEffect } from "react";
+import {  onAuthStateChanged } from "firebase/auth";
+import { auth } from "../utils/firebase";
+
 const Header = () => {
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        const uid = user;
+        // ...
+      } else {
+        // User is signed out
+        // ...
+      }
+    });
+  }, []);
   return (
     <>
       <header className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 shadow-lg">
