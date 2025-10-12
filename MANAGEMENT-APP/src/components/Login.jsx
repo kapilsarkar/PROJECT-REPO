@@ -8,6 +8,9 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { updateProfile } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 
 const initialValues = {
   name: "",
@@ -21,6 +24,7 @@ const initialValues = {
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const toggleSignInForm = () => setIsSignInForm(!isSignInForm);
 
@@ -29,7 +33,7 @@ const Login = () => {
       initialValues,
       validationSchema: isSignInForm ? LoginSchema : SignUpSchema, // ✅ Dynamic schema
       onSubmit: async (values, actions) => {
-        const { email, password } = values;
+        const { email, password, name, mobile } = values;
         try {
           if (isSignInForm) {
             // ✅ LOGIN FLOW
@@ -37,6 +41,16 @@ const Login = () => {
               auth,
               email,
               password
+            );
+           const user = userCredential.user;
+            // ✅ Dispatch user info to Redux
+            dispatch(
+              addUser({
+                uid: user.uid,
+                email: user.email,
+                displayName: user.displayName || name || "User",
+                mobile: user.mobile || "Not Provided",
+              })
             );
             console.log("User logged in:", userCredential.user);
             alert("Login Successful!");
@@ -48,7 +62,21 @@ const Login = () => {
               email,
               password
             );
+            // ✅ Update the user's display name
+            await updateProfile(userCredential.user, {
+              displayName: name,
+            });
+             const user = userCredential.user;
             console.log("User signed up:", userCredential.user);
+            // ✅ Dispatch user info including mobile
+            dispatch(
+              addUser({
+                uid: user.uid,
+                email: user.email,
+                displayName: name,
+                mobile: mobile,
+              })
+            );
             alert("Sign Up Successful!");
             navigate("/browse");
           }

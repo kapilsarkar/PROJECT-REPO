@@ -4,6 +4,7 @@ import Header from "./components/Header";
 function App() {
   return (
     <div className=" w-full relative min-h-screen flex flex-col bg-gradient-to-br from-indigo-600 via-blue-700 to-indigo-900 overflow-hidden">
+      
       {/* Decorative Background Blobs */}
       <div className="absolute -top-10 -left-10 w-96 h-96 bg-yellow-400/20 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-0 -right-10 w-[28rem] h-[28rem] bg-blue-400/30 rounded-full blur-3xl animate-pulse delay-300"></div>
