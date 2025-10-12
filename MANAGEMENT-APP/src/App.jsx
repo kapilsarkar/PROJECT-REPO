@@ -1,34 +1,30 @@
+import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
-import Login from "./components/Login";
 
 function App() {
   return (
-    <>
-      {/* Background */}
-      <div className="relative w-full h-screen bg-gradient-to-br from-indigo-600 via-blue-700 to-indigo-900 flex flex-col items-center overflow-hidden">
-        {/* Decorative Blobs */}
-        <div className="absolute top-0 left-0 w-80 h-80 bg-yellow-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-0 w-96 h-96 bg-blue-400/30 rounded-full blur-3xl animate-pulse delay-300"></div>
+    <div className=" w-full relative min-h-screen flex flex-col bg-gradient-to-br from-indigo-600 via-blue-700 to-indigo-900 overflow-hidden">
+      {/* Decorative Background Blobs */}
+      <div className="absolute -top-10 -left-10 w-96 h-96 bg-yellow-400/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-0 -right-10 w-[28rem] h-[28rem] bg-blue-400/30 rounded-full blur-3xl animate-pulse delay-300"></div>
 
-        {/* Header */}
-        <div className="absolute top-0 w-full z-20">
-          <Header />
+      {/* Header */}
+      <header className="sticky top-0 z-30 w-full bg-white/5 backdrop-blur-lg border-b border-white/10 shadow-md">
+        <Header />
+      </header>
+
+      {/* Main Content */}
+      <main className="w-full flex-grow flex items-center justify-center px-4 py-10 z-10">
+        <div className="w-full  bg-white/15 backdrop-blur-2xl border border-white/20 p-8 rounded-3xl shadow-2xl hover:shadow-yellow-500/30 transition-all duration-300">
+          <Outlet />
         </div>
+      </main>
 
-        {/* Main Content */}
-        <div className="flex flex-1 justify-center items-center z-10 w-full px-4">
-          <div className="w-full sm:w-4/5 md:w-1/2 lg:w-1/3 bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-2xl shadow-2xl transition-all hover:shadow-yellow-500/20">
-           
-            <Login />
-          </div>
-        </div>
-
-        {/* Footer */}
-        <footer className="z-10 text-white/70 text-sm py-3">
-          © {new Date().getFullYear()} ManagementApp. All Rights Reserved.
-        </footer>
-      </div>
-    </>
+      {/* Footer */}
+      <footer className="z-10 text-white/70 text-sm py-4 text-center bg-white/5 backdrop-blur-md border-t border-white/10">
+        © {new Date().getFullYear()} <span className="font-semibold text-yellow-400">ManagementApp</span>. All Rights Reserved.
+      </footer>
+    </div>
   );
 }
 

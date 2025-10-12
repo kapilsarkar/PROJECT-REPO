@@ -1,18 +1,38 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
-import {  onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { useDispatch } from "react-redux";
+import { addUser, removeUser } from "../utils/userSlice";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+
+
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/auth.user
-        const uid = user;
-        // ...
+        // User is signed in
+
+        const { uid, email, displayName, username, mobile, password } = user;
+        dispatch(
+          addUser({
+            uid: uid,
+            email: email,
+            displayName: displayName,
+            mobile: mobile,
+            username: username,
+            password: password,
+          })
+        );
+        navigate("/browse");
       } else {
         // User is signed out
-        // ...
+        dispatch(removeUser());
+        navigate("/");
       }
     });
   }, []);
