@@ -177,9 +177,7 @@ const Login = () => {
               } focus:outline-none focus:ring-2`}
             />
             {errors.confirm_password && touched.confirm_password && (
-              <p className="text-red-500 text-xs">
-                {errors.confirm_password}
-              </p>
+              <p className="text-red-500 text-xs">{errors.confirm_password}</p>
             )}
           </>
         )}
@@ -196,9 +194,7 @@ const Login = () => {
       {/* Toggle between forms */}
       <div className="text-center mt-4">
         <p className="text-sm text-gray-700">
-          {isSignInForm
-            ? "Don’t have an account?"
-            : "Already have an Account?"}
+          {isSignInForm ? "Don’t have an account?" : "Already have an Account?"}
           <span
             className="text-indigo-600 font-semibold ml-1 cursor-pointer hover:underline"
             onClick={toggleSignInForm}
@@ -211,7 +207,9 @@ const Login = () => {
       {/* Google Sign-In (Login only) */}
       {isSignInForm && (
         <div className="mt-4">
-          <GoogleSignInButton onClick={() => console.log("Google Sign In Clicked")} />
+          <GoogleSignInButton
+            onClick={() => console.log("Google Sign In Clicked")}
+          />
         </div>
       )}
     </div>

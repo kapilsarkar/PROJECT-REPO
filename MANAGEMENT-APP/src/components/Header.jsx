@@ -10,8 +10,6 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-
-
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
