@@ -1,6 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -25,3 +27,7 @@ if (typeof window !== "undefined") {
 // ✅ Correct: always get auth using the same app instance
 export const auth = getAuth(app);
 export { app, analytics };
+
+//For Image
+export const storage = getStorage(app);
+export const db = getFirestore(app);
