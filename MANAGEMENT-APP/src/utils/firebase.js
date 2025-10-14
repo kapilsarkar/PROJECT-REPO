@@ -1,10 +1,9 @@
+// utils/firebase.js
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
-import { getStorage } from "firebase/storage";
 import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCaT3T4--mKkerntzpgqWQxaNtwUhbJ3YI",
   authDomain: "management-app-4e795.firebaseapp.com",
@@ -15,19 +14,7 @@ const firebaseConfig = {
   measurementId: "G-WR3VY6H68X",
 };
 
-// ✅ Initialize Firebase app
 const app = initializeApp(firebaseConfig);
-
-// ✅ Optional: initialize analytics only if running in browser
-let analytics;
-if (typeof window !== "undefined") {
-  analytics = getAnalytics(app);
-}
-
-// ✅ Correct: always get auth using the same app instance
 export const auth = getAuth(app);
-export { app, analytics };
-
-//For Image
-export const storage = getStorage(app);
 export const db = getFirestore(app);
+export const storage = getStorage(app);
