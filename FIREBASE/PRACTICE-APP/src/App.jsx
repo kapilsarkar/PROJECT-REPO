@@ -4,6 +4,7 @@ import "./App.css";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import SignUpUser from "./component/SignUpUser";
 import SignIn from "./component/SignIn";
+import NewSignUp from "./component/NewSignUp";
 
 const db = getDatabase(app);
 const auth = getAuth(app);
@@ -28,6 +29,7 @@ function App() {
       <button onClick={signUpUser}>Create User</button>
       <SignUpUser />
       <SignIn />
+      <NewSignUp />
     </>
   );
 }
