@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword,GoogleAuthProvider,signInWithPopup } from "firebase/auth";
 import { app } from "../utils/firebase";
 
 const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
 
 const SignUpUser = () => {
   const [email, setEmail] = useState("");
@@ -14,6 +15,10 @@ const SignUpUser = () => {
       alert("Success")
     );
   };
+
+  const signUpWithGoogle = ()=>{
+      signInWithPopup(auth,googleProvider);
+  }
 
   return (
     <>
@@ -35,6 +40,8 @@ const SignUpUser = () => {
           required
           placeholder="Enter Your Password Here"
         />
+        <br/>
+        <button onClick={signUpWithGoogle}>SignIn With Google</button>
         <button onClick={createUser}>Sign Up</button>
       </div>
     </>
