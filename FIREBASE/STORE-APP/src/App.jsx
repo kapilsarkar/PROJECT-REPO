@@ -1,8 +1,10 @@
 import Body from "./components/Body";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
+ 
   return (
-    <div className="w-full bg-gradient-to-br from-lime-500 via-yellow-500 to-indigo-900 flex flex-col items-center">
+    <div className="w-full bg-gradient-to-br from-lime-500 via-yellow-500 to-indigo-900 flex flex-col h-[100vh] items-center">
       {/* Header */}
       <header className="w-full bg-white/10 backdrop-blur-md shadow-lg py-5 border-b border-white/20">
         <h1 className="text-center text-4xl font-extrabold tracking-wide text-white drop-shadow-lg">
@@ -13,6 +15,16 @@ function App() {
       {/* Main Content */}
       <main className="flex-grow flex items-center justify-center w-full p-6">
         <Body />
+        <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="colored"
+      />
       </main>
 
       {/* Footer (Optional) */}

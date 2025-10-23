@@ -1,10 +1,47 @@
 import { useState } from "react";
+import { auth } from "../utils/firebase";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
+import { toast } from "react-toastify";
 
 const Body = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
   };
+  const handleSubmit = async () => {
+    try {
+      if (isSignInForm) {
+        // 🟢 Login logic
+        await signInWithEmailAndPassword(auth, email, password);
+        toast.success("Login Successful");
+      } else {
+        // 🟢 Sign Up logic
+        const userCredential = await createUserWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
+        await updateProfile(userCredential.user, { displayName: name });
+        toast.success("Sign Up Successful");
+      }
+
+      // 🧹 Clear form fields after success
+      setEmail("");
+      setPassword("");
+      setName("");
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
+
   return (
     <div className="flex items-center justify-center  bg-gradient-to-br from-green-600 via-green-600 to-indigo-900 rounded-xl">
       <div className="w-full max-w-md bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-indigo-100">
@@ -12,7 +49,7 @@ const Body = () => {
           {isSignInForm ? "Log In" : "Sign Up"}
         </h2>
 
-        <form className="py-2 px-3">
+        <form onSubmit={(e) => e.preventDefault()} className="py-2 px-3">
           {!isSignInForm && (
             <div className="py-2">
               <label
@@ -23,6 +60,8 @@ const Body = () => {
               </label>
               <input
                 id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 type="text"
                 placeholder="Enter Your Name"
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
@@ -39,6 +78,8 @@ const Body = () => {
             </label>
             <input
               id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               type="email"
               placeholder="Enter your email"
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
@@ -54,6 +95,8 @@ const Body = () => {
             </label>
             <input
               id="password"
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
               type="password"
               placeholder="Enter your password"
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
@@ -62,6 +105,7 @@ const Body = () => {
 
           <button
             type="submit"
+            onClick={handleSubmit}
             className="w-full py-3 mt-2 text-white font-semibold bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 transition-all"
           >
             {isSignInForm ? "Log In" : "Sign Up"}
@@ -78,9 +122,7 @@ const Body = () => {
             {isSignInForm ? "Sign Up" : "Log In"}
           </span>
         </p>
-        
       </div>
-      
     </div>
   );
 };
