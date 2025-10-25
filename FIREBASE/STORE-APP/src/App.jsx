@@ -15,7 +15,7 @@ function App() {
       </header>
 
       {/* Main Content */}
-      <main className="flex-grow flex items-center justify-center w-full p-6">
+      <main className="flex-grow  flex items-center justify-center w-full p-6">
         <Routes>
           {/* Login/SignUp Page */}
           <Route path="/login" element={<Body />} />

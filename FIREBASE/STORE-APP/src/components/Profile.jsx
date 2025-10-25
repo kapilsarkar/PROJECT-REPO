@@ -36,8 +36,8 @@ const Profile = () => {
                 {user.displayName || "No Name Set"}
               </p>
               <p className="text-lg text-gray-800 mb-4">
-                <strong>Email :</strong>
-                {user.email}
+                <strong>Email : </strong>
+                   {user.email}
               </p>
             </>
           ) : (
