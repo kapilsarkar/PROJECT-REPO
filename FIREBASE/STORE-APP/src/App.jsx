@@ -1,9 +1,11 @@
-import { Routes } from "react-router";
+import { Link, Routes } from "react-router";
 import Body from "./components/Body";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Route } from "react-router";
 import Profile from "./components/Profile";
+import NewSignIn from "./components/NewSignIn";
+import NewProfile from "./components/NewProfile";
 function App() {
   return (
     <div className="w-full bg-gradient-to-br from-lime-500 via-yellow-500 to-indigo-900 flex flex-col h-[100vh] items-center">
@@ -12,6 +14,16 @@ function App() {
         <h1 className="text-center text-4xl font-extrabold tracking-wide text-white drop-shadow-lg">
           STORE<span className="text-violet-600">APP</span>
         </h1>
+        <div className="py-2">
+          <ul className="flex gap-2 justify-center p-2 cursor-pointer">
+            <li className="p-1.5 rounded-xs hover:duration-300 hover:ease-in-out hover:bg-orange-500 hover:text-white">
+              <Link to="/">Main Page</Link>
+            </li>
+            <li className="p-1.5 rounded-xs hover:duration-300 hover:ease-in-out hover:bg-orange-500 hover:text-white">
+              <Link to="/new">New Page</Link>
+            </li>
+          </ul>
+        </div>
       </header>
 
       {/* Main Content */}
@@ -20,7 +32,9 @@ function App() {
           {/* Login/SignUp Page */}
           <Route path="/login" element={<Body />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="*" element={<Body/>}/>
+          <Route path="/new" element={<NewSignIn />} />
+          <Route path="/newProfile" element={<NewProfile />} />
+          <Route path="*" element={<Body />} />
         </Routes>
 
         <ToastContainer
