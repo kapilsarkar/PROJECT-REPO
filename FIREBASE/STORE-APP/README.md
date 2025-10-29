@@ -6,7 +6,7 @@
 
 - User Can Get their name,email after Login.
 
-```
+```js
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
