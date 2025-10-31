@@ -1,11 +1,14 @@
 import Counter from "./components/Counter";
+import CounterControl from "./components/CounterControl";
+import CounterDisplay from "./components/CounterDisplay";
 
 function App() {
   return (
     <>
       <div>
-        <h2>REDUX-TOOLKIT(ADVANCE)</h2>
         <Counter />
+        <CounterDisplay />
+        <CounterControl />
       </div>
     </>
   );
