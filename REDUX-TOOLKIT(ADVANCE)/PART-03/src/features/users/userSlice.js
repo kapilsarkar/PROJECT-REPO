@@ -26,11 +26,24 @@ const userSlice = createSlice({
         },
         extraReducers: (builder) => {
             builder
-            .addCase(addUser.pending,(state,action)=>{
-                state.status="loading";
-            })
-            .addCase(addUser.fulfilled,(state,action)=>{
-        }
+                .addCase(addUser.pending, (state) => {
+                    state.status = "loading";
+                    state.error = null;
 
+                })
+                .addCase(addUser.fulfilled, (state) => {
+                    state.status = "succeeded";
+                    state.name = "";
+                    state.email = "";
+                })
+                .addCase(addUser.rejected, (state, action) => {
+                    state.state = "fulfilled";
+                    state.error = action.error.message;
+                })
+
+        },
     }
-})
+});
+
+export const { updateName, updateEmail } = userSlice.actions;
+export default userSlice.reducer;
