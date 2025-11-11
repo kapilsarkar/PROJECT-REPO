@@ -111,3 +111,8 @@ const store = configureStore({
 export default store;
 
 ```
+
+
+### RTQ QUERY :
+
+
