@@ -37,7 +37,7 @@ const userSlice = createSlice({
                     state.email = "";
                 })
                 .addCase(addUser.rejected, (state, action) => {
-                    state.state = "fulfilled";
+                    state.state = "failed";
                     state.error = action.error.message;
                 })
 

@@ -1,3 +1,29 @@
 {
-    "users":[]
+  "users": [
+    {
+      "id": "cc46",
+      "name": "Kapil Sarkar",
+      "email": "kapil@gmail.com"
+    },
+    {
+      "id": "8be7",
+      "name": "Kapil Sarkar",
+      "email": "kapil@gmail.com"
+    },
+    {
+      "id": "d6b7",
+      "name": "Kapil Sarkar",
+      "email": "kapil@gmail.com"
+    },
+    {
+      "id": "5728",
+      "name": "Rishabh Pant",
+      "email": "Rishabh@gmail.com"
+    },
+    {
+      "id": "8ad5",
+      "name": "Rishabh Pant",
+      "email": "Rishabh@gmail.com"
+    }
+  ]
 }
