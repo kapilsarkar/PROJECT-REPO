@@ -1,37 +1,45 @@
-import { useDispatch, useSelector } from "react-redux";
-import { addUser, updateEmail, updateName } from "../features/users/userSlice";
+import { useState } from "react";
+import { useAddUserMutation } from "../features/api/apiSlice";
 
 const UserForm = () => {
-  const dispatch = useDispatch();
-  const { name, email, status } = useSelector((state) => state.user);
-  const handleSubmit = (e) => {
+  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [addUser] = useAddUserMutation();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(addUser({ name, email }));
+    if (!formData.name || !formData.email) return;
+    await addUser(formData);
+    setFormData({ name: "", email: "" });
+  };
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
   return (
     <>
       <div>User Form</div>
       <form onSubmit={handleSubmit}>
         <input
+          name="name"
           type="text"
           placeholder="Enter Your Name"
-          value={name}
-          onChange={(e) => dispatch(updateName(e.target.value))}
+          value={formData.name}
+          onChange={handleChange}
         />
         <br />
         <br />
         <input
+          name="email"
           type="email"
           placeholder="Enter Your Email"
-          value={email}
-          onChange={(e) => dispatch(updateEmail(e.target.value))}
+          value={formData.email}
+          onChange={handleChange}
         />
         <br />
         <br />
         <button type="submit">Login</button>
-        {status === "loading" && <p>Submitting....</p>}
-        {status === "succeeded" && <p>Submitted Successfully!</p>}
-        {status === "failed" && <p>Submission Failed. Please try again.</p>}
       </form>
     </>
   );
