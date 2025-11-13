@@ -11,16 +11,16 @@ import {
 } from "react-router-dom";
 import ImageDisplay from "./components/ImageDisplay";
 import Counter from "./components/Counter.jsx";
+import Home from "./components/home.jsx";
+import FetchData from "./components/FetchData.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route
-        index
-        element={<h1 className="text-center mt-4">Welcome Home</h1>}
-      />
+      <Route index element={<Home />} />
       <Route path="counter" element={<Counter />} />
       <Route path="display" element={<ImageDisplay />} />
+      <Route path="fetch" element={<FetchData />} />
     </Route>
   )
 );
