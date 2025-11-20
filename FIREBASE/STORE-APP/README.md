@@ -40,3 +40,5 @@ export const store = configureStore({
   },
 });
 ```
+
+### CRUD OPERATION
