@@ -1,5 +1,13 @@
+import Form from "./components/Form";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <div>
+        <Form />
+      </div>
+    </>
+  );
 }
 
 export default App;
